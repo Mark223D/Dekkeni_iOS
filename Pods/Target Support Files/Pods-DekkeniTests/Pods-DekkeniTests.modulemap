@@ -1,0 +1,6 @@
+framework module Pods_DekkeniTests {
+  umbrella header "Pods-DekkeniTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

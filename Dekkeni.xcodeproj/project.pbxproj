@@ -1,0 +1,717 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B6F9FCA203FF6798088ADC4 /* Pods_DekkeniUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B24F2A20318A286E41A5D33 /* Pods_DekkeniUITests.framework */; };
+		4D64981822B78438007023CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D64981722B78438007023CD /* AppDelegate.swift */; };
+		4D64981A22B78438007023CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D64981922B78438007023CD /* ViewController.swift */; };
+		4D64981F22B78438007023CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D64981D22B78438007023CD /* Main.storyboard */; };
+		4D64982122B7843A007023CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D64982022B7843A007023CD /* Assets.xcassets */; };
+		4D64982422B7843A007023CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D64982222B7843A007023CD /* LaunchScreen.storyboard */; };
+		4D64982F22B7843A007023CD /* DekkeniTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D64982E22B7843A007023CD /* DekkeniTests.swift */; };
+		4D64983A22B7843A007023CD /* DekkeniUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D64983922B7843A007023CD /* DekkeniUITests.swift */; };
+		4D64984A22B78750007023CD /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D64984922B78750007023CD /* ContainerVC.swift */; };
+		4D64984C22B79959007023CD /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D64984B22B79959007023CD /* MenuTableViewController.swift */; };
+		5560AB9158C822B4F870A4D8 /* Pods_DekkeniTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C8587627A95736117AD5B2A /* Pods_DekkeniTests.framework */; };
+		DDBD741A75D5B66415A488A9 /* Pods_Dekkeni.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB4FE29C939C13BD9735ABAC /* Pods_Dekkeni.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4D64982B22B7843A007023CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D64980C22B78438007023CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D64981322B78438007023CD;
+			remoteInfo = Dekkeni;
+		};
+		4D64983622B7843A007023CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D64980C22B78438007023CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D64981322B78438007023CD;
+			remoteInfo = Dekkeni;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0329F5444AA76DAED482C997 /* Pods-Dekkeni.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dekkeni.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dekkeni/Pods-Dekkeni.debug.xcconfig"; sourceTree = "<group>"; };
+		155038BE1A6C7435E524C4BC /* Pods-DekkeniUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DekkeniUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DekkeniUITests/Pods-DekkeniUITests.release.xcconfig"; sourceTree = "<group>"; };
+		16AFE61BA84EFEF6BECC3B81 /* Pods-DekkeniTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DekkeniTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DekkeniTests/Pods-DekkeniTests.release.xcconfig"; sourceTree = "<group>"; };
+		2C113DACA45B64DF264BBF0C /* Pods-DekkeniTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DekkeniTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DekkeniTests/Pods-DekkeniTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4D64981422B78438007023CD /* Dekkeni.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dekkeni.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D64981722B78438007023CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4D64981922B78438007023CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4D64981E22B78438007023CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4D64982022B7843A007023CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4D64982322B7843A007023CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4D64982522B7843A007023CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D64982A22B7843A007023CD /* DekkeniTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DekkeniTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D64982E22B7843A007023CD /* DekkeniTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DekkeniTests.swift; sourceTree = "<group>"; };
+		4D64983022B7843A007023CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D64983522B7843A007023CD /* DekkeniUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DekkeniUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D64983922B7843A007023CD /* DekkeniUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DekkeniUITests.swift; sourceTree = "<group>"; };
+		4D64983B22B7843A007023CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D64984922B78750007023CD /* ContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
+		4D64984B22B79959007023CD /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		6B24F2A20318A286E41A5D33 /* Pods_DekkeniUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DekkeniUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C8587627A95736117AD5B2A /* Pods_DekkeniTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DekkeniTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A02839C5C308DBEEAE4E7CE /* Pods-Dekkeni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dekkeni.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dekkeni/Pods-Dekkeni.release.xcconfig"; sourceTree = "<group>"; };
+		B43E5F79C3E8A946376A4E1D /* Pods-DekkeniUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DekkeniUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DekkeniUITests/Pods-DekkeniUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BB4FE29C939C13BD9735ABAC /* Pods_Dekkeni.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dekkeni.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4D64981122B78438007023CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDBD741A75D5B66415A488A9 /* Pods_Dekkeni.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D64982722B7843A007023CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5560AB9158C822B4F870A4D8 /* Pods_DekkeniTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D64983222B7843A007023CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B6F9FCA203FF6798088ADC4 /* Pods_DekkeniUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4D64980B22B78438007023CD = {
+			isa = PBXGroup;
+			children = (
+				4D64981622B78438007023CD /* Dekkeni */,
+				4D64982D22B7843A007023CD /* DekkeniTests */,
+				4D64983822B7843A007023CD /* DekkeniUITests */,
+				4D64981522B78438007023CD /* Products */,
+				5F1F100936F7194731E3F58B /* Pods */,
+				D37DE6B8B8BBF57E66AE51BA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4D64981522B78438007023CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D64981422B78438007023CD /* Dekkeni.app */,
+				4D64982A22B7843A007023CD /* DekkeniTests.xctest */,
+				4D64983522B7843A007023CD /* DekkeniUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4D64981622B78438007023CD /* Dekkeni */ = {
+			isa = PBXGroup;
+			children = (
+				4D64981722B78438007023CD /* AppDelegate.swift */,
+				4D64984922B78750007023CD /* ContainerVC.swift */,
+				4D64984B22B79959007023CD /* MenuTableViewController.swift */,
+				4D64981922B78438007023CD /* ViewController.swift */,
+				4D64981D22B78438007023CD /* Main.storyboard */,
+				4D64982022B7843A007023CD /* Assets.xcassets */,
+				4D64982222B7843A007023CD /* LaunchScreen.storyboard */,
+				4D64982522B7843A007023CD /* Info.plist */,
+			);
+			path = Dekkeni;
+			sourceTree = "<group>";
+		};
+		4D64982D22B7843A007023CD /* DekkeniTests */ = {
+			isa = PBXGroup;
+			children = (
+				4D64982E22B7843A007023CD /* DekkeniTests.swift */,
+				4D64983022B7843A007023CD /* Info.plist */,
+			);
+			path = DekkeniTests;
+			sourceTree = "<group>";
+		};
+		4D64983822B7843A007023CD /* DekkeniUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4D64983922B7843A007023CD /* DekkeniUITests.swift */,
+				4D64983B22B7843A007023CD /* Info.plist */,
+			);
+			path = DekkeniUITests;
+			sourceTree = "<group>";
+		};
+		5F1F100936F7194731E3F58B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0329F5444AA76DAED482C997 /* Pods-Dekkeni.debug.xcconfig */,
+				9A02839C5C308DBEEAE4E7CE /* Pods-Dekkeni.release.xcconfig */,
+				2C113DACA45B64DF264BBF0C /* Pods-DekkeniTests.debug.xcconfig */,
+				16AFE61BA84EFEF6BECC3B81 /* Pods-DekkeniTests.release.xcconfig */,
+				B43E5F79C3E8A946376A4E1D /* Pods-DekkeniUITests.debug.xcconfig */,
+				155038BE1A6C7435E524C4BC /* Pods-DekkeniUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D37DE6B8B8BBF57E66AE51BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB4FE29C939C13BD9735ABAC /* Pods_Dekkeni.framework */,
+				8C8587627A95736117AD5B2A /* Pods_DekkeniTests.framework */,
+				6B24F2A20318A286E41A5D33 /* Pods_DekkeniUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4D64981322B78438007023CD /* Dekkeni */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D64983E22B7843A007023CD /* Build configuration list for PBXNativeTarget "Dekkeni" */;
+			buildPhases = (
+				C24B1CD15288AFFC9E349A55 /* [CP] Check Pods Manifest.lock */,
+				4D64981022B78438007023CD /* Sources */,
+				4D64981122B78438007023CD /* Frameworks */,
+				4D64981222B78438007023CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Dekkeni;
+			productName = Dekkeni;
+			productReference = 4D64981422B78438007023CD /* Dekkeni.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4D64982922B7843A007023CD /* DekkeniTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D64984122B7843A007023CD /* Build configuration list for PBXNativeTarget "DekkeniTests" */;
+			buildPhases = (
+				B4B389D5770E253785F12110 /* [CP] Check Pods Manifest.lock */,
+				4D64982622B7843A007023CD /* Sources */,
+				4D64982722B7843A007023CD /* Frameworks */,
+				4D64982822B7843A007023CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4D64982C22B7843A007023CD /* PBXTargetDependency */,
+			);
+			name = DekkeniTests;
+			productName = DekkeniTests;
+			productReference = 4D64982A22B7843A007023CD /* DekkeniTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4D64983422B7843A007023CD /* DekkeniUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D64984422B7843A007023CD /* Build configuration list for PBXNativeTarget "DekkeniUITests" */;
+			buildPhases = (
+				CAD9776667CEF65CA3C5E3F6 /* [CP] Check Pods Manifest.lock */,
+				4D64983122B7843A007023CD /* Sources */,
+				4D64983222B7843A007023CD /* Frameworks */,
+				4D64983322B7843A007023CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4D64983722B7843A007023CD /* PBXTargetDependency */,
+			);
+			name = DekkeniUITests;
+			productName = DekkeniUITests;
+			productReference = 4D64983522B7843A007023CD /* DekkeniUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4D64980C22B78438007023CD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Dekkeni;
+				TargetAttributes = {
+					4D64981322B78438007023CD = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					4D64982922B7843A007023CD = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 4D64981322B78438007023CD;
+					};
+					4D64983422B7843A007023CD = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 4D64981322B78438007023CD;
+					};
+				};
+			};
+			buildConfigurationList = 4D64980F22B78438007023CD /* Build configuration list for PBXProject "Dekkeni" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4D64980B22B78438007023CD;
+			productRefGroup = 4D64981522B78438007023CD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4D64981322B78438007023CD /* Dekkeni */,
+				4D64982922B7843A007023CD /* DekkeniTests */,
+				4D64983422B7843A007023CD /* DekkeniUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4D64981222B78438007023CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D64982422B7843A007023CD /* LaunchScreen.storyboard in Resources */,
+				4D64982122B7843A007023CD /* Assets.xcassets in Resources */,
+				4D64981F22B78438007023CD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D64982822B7843A007023CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D64983322B7843A007023CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B4B389D5770E253785F12110 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DekkeniTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C24B1CD15288AFFC9E349A55 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Dekkeni-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CAD9776667CEF65CA3C5E3F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DekkeniUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4D64981022B78438007023CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D64984A22B78750007023CD /* ContainerVC.swift in Sources */,
+				4D64981822B78438007023CD /* AppDelegate.swift in Sources */,
+				4D64981A22B78438007023CD /* ViewController.swift in Sources */,
+				4D64984C22B79959007023CD /* MenuTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D64982622B7843A007023CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D64982F22B7843A007023CD /* DekkeniTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D64983122B7843A007023CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D64983A22B7843A007023CD /* DekkeniUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4D64982C22B7843A007023CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D64981322B78438007023CD /* Dekkeni */;
+			targetProxy = 4D64982B22B7843A007023CD /* PBXContainerItemProxy */;
+		};
+		4D64983722B7843A007023CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D64981322B78438007023CD /* Dekkeni */;
+			targetProxy = 4D64983622B7843A007023CD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4D64981D22B78438007023CD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D64981E22B78438007023CD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4D64982222B7843A007023CD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D64982322B7843A007023CD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4D64983C22B7843A007023CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4D64983D22B7843A007023CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4D64983F22B7843A007023CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0329F5444AA76DAED482C997 /* Pods-Dekkeni.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7VHDJ49KYT;
+				INFOPLIST_FILE = Dekkeni/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Dekkeni;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4D64984022B7843A007023CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A02839C5C308DBEEAE4E7CE /* Pods-Dekkeni.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7VHDJ49KYT;
+				INFOPLIST_FILE = Dekkeni/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.Dekkeni;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4D64984222B7843A007023CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C113DACA45B64DF264BBF0C /* Pods-DekkeniTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7VHDJ49KYT;
+				INFOPLIST_FILE = DekkeniTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.DekkeniTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dekkeni.app/Dekkeni";
+			};
+			name = Debug;
+		};
+		4D64984322B7843A007023CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16AFE61BA84EFEF6BECC3B81 /* Pods-DekkeniTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7VHDJ49KYT;
+				INFOPLIST_FILE = DekkeniTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.DekkeniTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dekkeni.app/Dekkeni";
+			};
+			name = Release;
+		};
+		4D64984522B7843A007023CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B43E5F79C3E8A946376A4E1D /* Pods-DekkeniUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7VHDJ49KYT;
+				INFOPLIST_FILE = DekkeniUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.DekkeniUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Dekkeni;
+			};
+			name = Debug;
+		};
+		4D64984622B7843A007023CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 155038BE1A6C7435E524C4BC /* Pods-DekkeniUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7VHDJ49KYT;
+				INFOPLIST_FILE = DekkeniUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.DekkeniUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Dekkeni;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4D64980F22B78438007023CD /* Build configuration list for PBXProject "Dekkeni" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D64983C22B7843A007023CD /* Debug */,
+				4D64983D22B7843A007023CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D64983E22B7843A007023CD /* Build configuration list for PBXNativeTarget "Dekkeni" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D64983F22B7843A007023CD /* Debug */,
+				4D64984022B7843A007023CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D64984122B7843A007023CD /* Build configuration list for PBXNativeTarget "DekkeniTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D64984222B7843A007023CD /* Debug */,
+				4D64984322B7843A007023CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D64984422B7843A007023CD /* Build configuration list for PBXNativeTarget "DekkeniUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D64984522B7843A007023CD /* Debug */,
+				4D64984622B7843A007023CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4D64980C22B78438007023CD /* Project object */;
+}
