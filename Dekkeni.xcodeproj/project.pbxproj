@@ -9,14 +9,20 @@
 /* Begin PBXBuildFile section */
 		3B6F9FCA203FF6798088ADC4 /* Pods_DekkeniUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B24F2A20318A286E41A5D33 /* Pods_DekkeniUITests.framework */; };
 		4D64981822B78438007023CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D64981722B78438007023CD /* AppDelegate.swift */; };
-		4D64981A22B78438007023CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D64981922B78438007023CD /* ViewController.swift */; };
+		4D64981A22B78438007023CD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D64981922B78438007023CD /* HomeViewController.swift */; };
 		4D64981F22B78438007023CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D64981D22B78438007023CD /* Main.storyboard */; };
 		4D64982122B7843A007023CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D64982022B7843A007023CD /* Assets.xcassets */; };
 		4D64982422B7843A007023CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D64982222B7843A007023CD /* LaunchScreen.storyboard */; };
 		4D64982F22B7843A007023CD /* DekkeniTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D64982E22B7843A007023CD /* DekkeniTests.swift */; };
 		4D64983A22B7843A007023CD /* DekkeniUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D64983922B7843A007023CD /* DekkeniUITests.swift */; };
 		4D64984A22B78750007023CD /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D64984922B78750007023CD /* ContainerVC.swift */; };
-		4D64984C22B79959007023CD /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D64984B22B79959007023CD /* MenuTableViewController.swift */; };
+		4D64984C22B79959007023CD /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D64984B22B79959007023CD /* MenuViewController.swift */; };
+		4D9D87B622B929E8008F91C2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4D9D87B422B929E8008F91C2 /* Localizable.strings */; };
+		4D9D87BA22B9335D008F91C2 /* MenuItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D87B822B9335D008F91C2 /* MenuItemTableViewCell.swift */; };
+		4D9D87BB22B9335D008F91C2 /* MenuItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D9D87B922B9335D008F91C2 /* MenuItemTableViewCell.xib */; };
+		4D9D87BD22B94994008F91C2 /* MenuDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D87BC22B94994008F91C2 /* MenuDataSource.swift */; };
+		4D9D87C122B94AC9008F91C2 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D87C022B94AC9008F91C2 /* MenuItem.swift */; };
+		4DBCC9A622B90FAD00EE16D6 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBCC9A522B90FAD00EE16D6 /* StringUtils.swift */; };
 		5560AB9158C822B4F870A4D8 /* Pods_DekkeniTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C8587627A95736117AD5B2A /* Pods_DekkeniTests.framework */; };
 		DDBD741A75D5B66415A488A9 /* Pods_Dekkeni.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB4FE29C939C13BD9735ABAC /* Pods_Dekkeni.framework */; };
 /* End PBXBuildFile section */
@@ -45,7 +51,7 @@
 		2C113DACA45B64DF264BBF0C /* Pods-DekkeniTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DekkeniTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DekkeniTests/Pods-DekkeniTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4D64981422B78438007023CD /* Dekkeni.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dekkeni.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D64981722B78438007023CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4D64981922B78438007023CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4D64981922B78438007023CD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4D64981E22B78438007023CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4D64982022B7843A007023CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D64982322B7843A007023CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,7 +63,16 @@
 		4D64983922B7843A007023CD /* DekkeniUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DekkeniUITests.swift; sourceTree = "<group>"; };
 		4D64983B22B7843A007023CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D64984922B78750007023CD /* ContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
-		4D64984B22B79959007023CD /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		4D64984B22B79959007023CD /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		4D9D87B222B929BE008F91C2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		4D9D87B322B929BE008F91C2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		4D9D87B522B929E8008F91C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4D9D87B722B92A2B008F91C2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4D9D87B822B9335D008F91C2 /* MenuItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemTableViewCell.swift; sourceTree = "<group>"; };
+		4D9D87B922B9335D008F91C2 /* MenuItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuItemTableViewCell.xib; sourceTree = "<group>"; };
+		4D9D87BC22B94994008F91C2 /* MenuDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDataSource.swift; sourceTree = "<group>"; };
+		4D9D87C022B94AC9008F91C2 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		4DBCC9A522B90FAD00EE16D6 /* StringUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringUtils.swift; sourceTree = "<group>"; };
 		6B24F2A20318A286E41A5D33 /* Pods_DekkeniUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DekkeniUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C8587627A95736117AD5B2A /* Pods_DekkeniTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DekkeniTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A02839C5C308DBEEAE4E7CE /* Pods-Dekkeni.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dekkeni.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dekkeni/Pods-Dekkeni.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,12 +135,14 @@
 			children = (
 				4D64981722B78438007023CD /* AppDelegate.swift */,
 				4D64984922B78750007023CD /* ContainerVC.swift */,
-				4D64984B22B79959007023CD /* MenuTableViewController.swift */,
-				4D64981922B78438007023CD /* ViewController.swift */,
+				4D9D87BE22B949C8008F91C2 /* Menu */,
+				4D64981922B78438007023CD /* HomeViewController.swift */,
 				4D64981D22B78438007023CD /* Main.storyboard */,
 				4D64982022B7843A007023CD /* Assets.xcassets */,
 				4D64982222B7843A007023CD /* LaunchScreen.storyboard */,
 				4D64982522B7843A007023CD /* Info.plist */,
+				4DBCC9A522B90FAD00EE16D6 /* StringUtils.swift */,
+				4D9D87B422B929E8008F91C2 /* Localizable.strings */,
 			);
 			path = Dekkeni;
 			sourceTree = "<group>";
@@ -146,6 +163,26 @@
 				4D64983B22B7843A007023CD /* Info.plist */,
 			);
 			path = DekkeniUITests;
+			sourceTree = "<group>";
+		};
+		4D9D87BE22B949C8008F91C2 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				4D9D87C022B94AC9008F91C2 /* MenuItem.swift */,
+				4D9D87BF22B949D5008F91C2 /* Menu Cell */,
+				4D9D87BC22B94994008F91C2 /* MenuDataSource.swift */,
+				4D64984B22B79959007023CD /* MenuViewController.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		4D9D87BF22B949D5008F91C2 /* Menu Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4D9D87B822B9335D008F91C2 /* MenuItemTableViewCell.swift */,
+				4D9D87B922B9335D008F91C2 /* MenuItemTableViewCell.xib */,
+			);
+			path = "Menu Cell";
 			sourceTree = "<group>";
 		};
 		5F1F100936F7194731E3F58B /* Pods */ = {
@@ -182,6 +219,7 @@
 				4D64981022B78438007023CD /* Sources */,
 				4D64981122B78438007023CD /* Frameworks */,
 				4D64981222B78438007023CD /* Resources */,
+				E6FE8B9DDE382F4B9AF34691 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -258,8 +296,8 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
 			mainGroup = 4D64980B22B78438007023CD;
 			productRefGroup = 4D64981522B78438007023CD /* Products */;
@@ -281,6 +319,8 @@
 				4D64982422B7843A007023CD /* LaunchScreen.storyboard in Resources */,
 				4D64982122B7843A007023CD /* Assets.xcassets in Resources */,
 				4D64981F22B78438007023CD /* Main.storyboard in Resources */,
+				4D9D87BB22B9335D008F91C2 /* MenuItemTableViewCell.xib in Resources */,
+				4D9D87B622B929E8008F91C2 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +407,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E6FE8B9DDE382F4B9AF34691 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Dekkeni/Pods-Dekkeni-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Dekkeni/Pods-Dekkeni-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -375,9 +437,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D64984A22B78750007023CD /* ContainerVC.swift in Sources */,
+				4D9D87BD22B94994008F91C2 /* MenuDataSource.swift in Sources */,
+				4DBCC9A622B90FAD00EE16D6 /* StringUtils.swift in Sources */,
 				4D64981822B78438007023CD /* AppDelegate.swift in Sources */,
-				4D64981A22B78438007023CD /* ViewController.swift in Sources */,
-				4D64984C22B79959007023CD /* MenuTableViewController.swift in Sources */,
+				4D9D87BA22B9335D008F91C2 /* MenuItemTableViewCell.swift in Sources */,
+				4D9D87C122B94AC9008F91C2 /* MenuItem.swift in Sources */,
+				4D64981A22B78438007023CD /* HomeViewController.swift in Sources */,
+				4D64984C22B79959007023CD /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +483,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				4D64981E22B78438007023CD /* Base */,
+				4D9D87B222B929BE008F91C2 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -425,8 +492,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				4D64982322B7843A007023CD /* Base */,
+				4D9D87B322B929BE008F91C2 /* en */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		4D9D87B422B929E8008F91C2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D9D87B522B929E8008F91C2 /* Base */,
+				4D9D87B722B92A2B008F91C2 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -436,6 +513,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -497,6 +575,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -682,7 +761,7 @@
 				4D64983D22B7843A007023CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		4D64983E22B7843A007023CD /* Build configuration list for PBXNativeTarget "Dekkeni" */ = {
 			isa = XCConfigurationList;
@@ -691,7 +770,7 @@
 				4D64984022B7843A007023CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		4D64984122B7843A007023CD /* Build configuration list for PBXNativeTarget "DekkeniTests" */ = {
 			isa = XCConfigurationList;
@@ -700,7 +779,7 @@
 				4D64984322B7843A007023CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		4D64984422B7843A007023CD /* Build configuration list for PBXNativeTarget "DekkeniUITests" */ = {
 			isa = XCConfigurationList;
@@ -709,7 +788,7 @@
 				4D64984622B7843A007023CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

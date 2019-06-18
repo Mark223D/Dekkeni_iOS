@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  Dekkeni
+
+  Created by Mark on 6/18/19.
+  Copyright © 2019 Dekkeni. All rights reserved.
+*/
+
+"home" = "Home";
+"fresh" = "Fresh";
+"fruits" = "Fruits & Vegetables";
+"meat" = "Meat & Poultry";
+
+"beverages" = "Beverages";
+"groceries" = "Groceries";
+"equia" = "eQuia";
+
+"bakery" = "Bakery";
+"confectionery" = "Confectionery";
+"tobacco" = "Tobacco & Co";

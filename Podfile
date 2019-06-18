@@ -6,7 +6,8 @@ target 'Dekkeni' do
   use_frameworks!
 
   # Pods for Dekkeni
-
+  pod 'pop'
+  
   target 'DekkeniTests' do
     inherit! :search_paths
     # Pods for testing

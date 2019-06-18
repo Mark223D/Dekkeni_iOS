@@ -7,7 +7,25 @@
 		<key>Dekkeni.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>4</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>4D64981322B78438007023CD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4D64982922B7843A007023CD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4D64983422B7843A007023CD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
