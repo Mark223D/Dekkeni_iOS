@@ -1,16 +1,20 @@
 PODS:
+  - AirBar (2.0.5)
   - pop (1.0.12)
 
 DEPENDENCIES:
+  - AirBar
   - pop
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - AirBar
     - pop
 
 SPEC CHECKSUMS:
+  AirBar: 01bfd58778a6f08491dd0eb7574979075da3bd14
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
 
-PODFILE CHECKSUM: 11d77403ce94ded16ebe446cce2b061eacf4a2a0
+PODFILE CHECKSUM: 8d9edce04e6883e085103e3e8367f8033fca2c5a
 
 COCOAPODS: 1.5.3

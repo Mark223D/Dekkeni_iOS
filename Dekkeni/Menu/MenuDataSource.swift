@@ -17,24 +17,18 @@ class MenuDataSource: NSObject {
     }
 }
 
-extension MenuDataSource: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension MenuDataSource: UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return menuItems.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "menuItem", for: indexPath) as! MenuItemTableViewCell
-        let menuItem = menuItems[indexPath.row]
-        cell.iconImage = menuItem.icon
-        cell.titleText = menuItem.title
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "menuItem", for: indexPath) as? MenuCollectionViewCell else { return UICollectionViewCell() }
+        
+        cell.titleText = menuItems[indexPath.row].title
         
         return cell
     }
-}
-
-extension MenuDataSource: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath) as? MenuItemTableViewCell
-        print(cell?.titleText ?? "")
-    }
+    
+    
 }

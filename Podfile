@@ -7,6 +7,8 @@ target 'Dekkeni' do
 
   # Pods for Dekkeni
   pod 'pop'
+  pod 'AirBar'
+
   
   target 'DekkeniTests' do
     inherit! :search_paths

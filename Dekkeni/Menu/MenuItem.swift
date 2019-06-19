@@ -9,18 +9,17 @@
 import UIKit
 
 struct MenuItem {
-    let icon: UIImage
     let title: String
     
     static let items: [MenuItem] = [
-        .init(icon: #imageLiteral(resourceName: "home"), title: NSLocalizedString("home", comment: "")),
-        .init(icon: #imageLiteral(resourceName: "fresh.png"), title: NSLocalizedString("fresh", comment: "")),
-        .init(icon: #imageLiteral(resourceName: "fruits.png"), title: NSLocalizedString("fruits", comment: "")),
-        .init(icon: #imageLiteral(resourceName: "meat"), title: NSLocalizedString("meat", comment: "")),
-        .init(icon: #imageLiteral(resourceName: "beverages"), title: NSLocalizedString("beverages", comment: "")),
-        .init(icon: #imageLiteral(resourceName: "groceries"), title: NSLocalizedString("groceries", comment: "")),
-        .init(icon: #imageLiteral(resourceName: "equia"), title: NSLocalizedString("equia", comment: "")),
-        .init(icon: #imageLiteral(resourceName: "bakery"), title: NSLocalizedString("bakery", comment: "")),
-        .init(icon: #imageLiteral(resourceName: "tobacco"), title: NSLocalizedString("tobacco", comment: ""))
+        .init( title: NSLocalizedString("home", comment: "")),
+        .init( title: NSLocalizedString("fresh", comment: "")),
+        .init( title: NSLocalizedString("fruits", comment: "")),
+        .init( title: NSLocalizedString("meat", comment: "")),
+        .init( title: NSLocalizedString("beverages", comment: "")),
+        .init( title: NSLocalizedString("groceries", comment: "")),
+        .init( title: NSLocalizedString("equia", comment: "")),
+        .init( title: NSLocalizedString("bakery", comment: "")),
+        .init( title: NSLocalizedString("tobacco", comment: ""))
     ]
 }

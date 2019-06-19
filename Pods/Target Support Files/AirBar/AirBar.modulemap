@@ -1,0 +1,6 @@
+framework module AirBar {
+  umbrella header "AirBar-umbrella.h"
+
+  export *
+  module * { export * }
+}
