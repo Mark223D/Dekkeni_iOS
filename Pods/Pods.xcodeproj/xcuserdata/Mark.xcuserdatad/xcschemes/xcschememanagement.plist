@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>AirBar.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-Dekkeni.xcscheme</key>
 		<dict>
 			<key>isShown</key>
