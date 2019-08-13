@@ -69,7 +69,7 @@ public struct WormTabStripStylePropertyies {
     // font size of tabs
     //let kFontSizeOfTabButton:CGFloat = 15
     var tabItemDefaultFont:UIFont = UIFont(name: "arial", size: 14)!
-    var tabItemSelectedFont:UIFont = UIFont(name: "arial", size: 16)!
+    var tabItemSelectedFont:UIFont = UIFont(name: "Arial-BoldMT", size: 18)!
     
     /*****
      colors

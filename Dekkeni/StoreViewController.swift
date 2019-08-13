@@ -7,7 +7,13 @@
 //
 
 import UIKit
-class StoreViewController: UITabBarController, WormTabStripDelegate{
+
+class StoreViewController: UIViewController {
+    
+    @IBOutlet weak var searchTextField: UITextField!
+    let screenSize: CGRect = UIScreen.main.bounds
+
+    
     let titles = [
         "Fresh",
         "Meat & Poultry",
@@ -18,77 +24,100 @@ class StoreViewController: UITabBarController, WormTabStripDelegate{
         "Confectionery",
         "Tobacco & Co"
     ]
-    let colors = [
-        UIColor.red,
-        UIColor.blue,
-        UIColor.green,
-        UIColor.magenta,
-        UIColor.cyan,
-        UIColor.yellow,
-        UIColor.red,
-        UIColor.blue
+
+    lazy var viewPager: WormTabStrip = {
+        let frame =  CGRect(x: 0, y: 90, width: self.view.frame.size.width, height: self.view.frame.size.height)
+        
+        let view = WormTabStrip(frame: frame)
+        view.delegate = self
+        view.eyStyle.wormStyel = .LINE
+        view.eyStyle.isWormEnable = false
+        view.eyStyle.spacingBetweenTabs = 15
+        view.eyStyle.dividerBackgroundColor = .white
+        view.eyStyle.tabItemSelectedColor = .white
+        view.currentTabIndex = 0
+        view.shouldCenterSelectedWorm = true
+        view.buildUI()
+        return view
+    }()
+    
+    lazy var dataSource : [StoreItemCellContent] = [
+                                StoreItemCellContent(title: "Chips", description: "Lays Chips Bag 100g", quantity: 0, price: "1.00"),
+                                 StoreItemCellContent(title: "Chocolate", description: "Cadbury 10g", quantity: 0, price: "1.50"),
+                                  StoreItemCellContent(title: "Bread", description: "Bread Bag 500g", quantity: 0, price: "2.50"),
+                                   StoreItemCellContent(title: "Milk", description: "Milk Carton 1L", quantity: 0, price: "3.50"),
+                                   StoreItemCellContent(title: "Chips", description: "Lays Chips Bag 100g", quantity: 0, price: "1.00"),
+                                   StoreItemCellContent(title: "Chocolate", description: "Cadbury 10g", quantity: 0, price: "1.50"),
+                                   StoreItemCellContent(title: "Bread", description: "Bread Bag 500g", quantity: 0, price: "2.50"),
+                                   StoreItemCellContent(title: "Milk", description: "Milk Carton 1L", quantity: 0, price: "3.50"),
     ]
 
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let searchView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height:90))
-        searchView.backgroundColor = .red
-        let text = UITextField(frame: CGRect(x: 20, y: 30, width: self.view.frame.width*0.666, height: searchView.frame.height/1.5))
-        text.backgroundColor = .white
-        text.textColor = .white
-        text.placeholder = "Search"
-        text.borderStyle = .roundedRect
-        searchView.addSubview(text)
+
+        searchTextField.setIcon(UIImage(named: "magnifier")!)
         
-        let button = UIButton(frame: CGRect(x: text.frame.origin.x + text.frame.width + 10, y: text.frame.origin.y, width: searchView.frame.width*0.2, height: text.frame.height))
-        
-        button.backgroundColor = .white
-        button.tintColor = .red
-        button.titleLabel?.text = "Menu"
-        button.setTitleColor(.red, for: .normal)
-        button.cornerRadius = 10
-        
-        searchView.addSubview(button)
-        
-        self.view.addSubview(searchView)
+        styleStatusBar()
+
+        self.view.addSubview(self.viewPager)
+
         
         
-        let frame =  CGRect(x: 0, y: 90, width: self.view.frame.size.width, height: self.view.frame.size.height)
-        let viewPager:WormTabStrip = WormTabStrip(frame: frame)
-        self.view.addSubview(viewPager) //IMPORTANT!
-        viewPager.delegate = self
-        viewPager.eyStyle.wormStyel = .LINE
-        viewPager.eyStyle.isWormEnable = false
-        viewPager.eyStyle.spacingBetweenTabs = 15
-        viewPager.eyStyle.dividerBackgroundColor = .white
-        viewPager.eyStyle.tabItemSelectedColor = .white
-        //default selected tab
-        viewPager.currentTabIndex = 0
-        //center the selected tab
-        viewPager.shouldCenterSelectedWorm = true
-        viewPager.buildUI()
         
-        // Do any additional setup after loading the view.
     }
+    func styleStatusBar(){
+        
+        UINavigationBar.appearance().clipsToBounds = true
+        
+        let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
+        
+        statusBar.backgroundColor = UIColor.red
+    }
+    
+    @IBAction func tapAnywhere(_ sender: Any) {
+        searchTextField.resignFirstResponder()
+    }
+    
+    
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    
+    // MARK: WormTabStrip Delegate Functions
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        super.viewWillDisappear(animated)
+    }
+    
+    
+}
+
+extension StoreViewController: WormTabStripDelegate{
     func WTSNumberOfTabs() -> Int {
         return titles.count
     }
     
     func WTSViewOfTab(index: Int) -> UIView {
-        let view = UIView(frame: CGRect(x: self.view.frame.origin.x, y: self.view.frame.origin.y, width: self.view.frame.width, height: self.view.frame.height))
-        let tableView = UITableView(frame: CGRect(x: view.frame.origin.x
-            , y: view.frame.origin.y, width: view.frame.width, height: view.frame.height))
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.register(UINib(nibName: "StoreTableViewCell", bundle: nil), forCellReuseIdentifier: "StoreItem")
+        let view = UIView(frame: CGRect(x: self.view.frame.origin.x, y: self.view.frame.origin.y, width: self.view.frame.width, height: 90))
+        let flowLayout = UICollectionViewFlowLayout.init()
+        let collectionView = UICollectionView(frame: CGRect(x: self.view.frame.origin.x, y: self.view.frame.origin.y, width: self.view.frame.width, height: self.view.frame.height-view.frame.height), collectionViewLayout: flowLayout)
+        collectionView.backgroundColor = .white
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.allowsMultipleSelection = true
+        collectionView.allowsSelection = true
+        collectionView.register(UINib(nibName: "StoreTableViewCell", bundle: nil), forCellWithReuseIdentifier: "StoreItem")
         
-        view.addSubview(tableView)
+        view.addSubview(collectionView)
+        
         return view
     }
     
@@ -101,26 +130,43 @@ class StoreViewController: UITabBarController, WormTabStripDelegate{
     
     func WTSReachedRightEdge(panParam: UIPanGestureRecognizer) {
     }
-    
 }
 
-extension StoreViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
+extension StoreViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return dataSource.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "StoreItem", for: indexPath)
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoreItem", for: indexPath) as! StoreItemCell
+        cell.setContent(content: dataSource[indexPath.row])
         
+//        
+//        cell.layer.borderColor = UIColor.lightGray.cgColor
+//        cell.layer.borderWidth = 1
         return cell
     }
-    
-    
-    
-}
-extension StoreViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 367
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("test")
     }
     
+   
+    
+}
+extension StoreViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets
+    {
+        return UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let leftAndRightPaddings: CGFloat = 10
+                let numberOfItemsPerRow: CGFloat = 2.0
+                let width = (screenSize.width-leftAndRightPaddings)/numberOfItemsPerRow
+                return CGSize(width: width, height: width*1.4)
+    }
+    
+   
 }

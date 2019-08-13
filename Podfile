@@ -7,6 +7,7 @@ target 'Dekkeni' do
 
   # Pods for Dekkeni
   pod 'pop'
+  pod 'FAPanels'
 
 
   target 'DekkeniTests' do
