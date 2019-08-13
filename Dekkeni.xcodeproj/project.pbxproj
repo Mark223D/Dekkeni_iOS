@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3B6F9FCA203FF6798088ADC4 /* Pods_DekkeniUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B24F2A20318A286E41A5D33 /* Pods_DekkeniUITests.framework */; };
+		4D3A720623036C41004F9ED0 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A720523036C41004F9ED0 /* DetailsViewController.swift */; };
 		4D64981822B78438007023CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D64981722B78438007023CD /* AppDelegate.swift */; };
 		4D64981F22B78438007023CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D64981D22B78438007023CD /* Main.storyboard */; };
 		4D64982F22B7843A007023CD /* DekkeniTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D64982E22B7843A007023CD /* DekkeniTests.swift */; };
@@ -50,6 +51,7 @@
 		155038BE1A6C7435E524C4BC /* Pods-DekkeniUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DekkeniUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DekkeniUITests/Pods-DekkeniUITests.release.xcconfig"; sourceTree = "<group>"; };
 		16AFE61BA84EFEF6BECC3B81 /* Pods-DekkeniTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DekkeniTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DekkeniTests/Pods-DekkeniTests.release.xcconfig"; sourceTree = "<group>"; };
 		2C113DACA45B64DF264BBF0C /* Pods-DekkeniTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DekkeniTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DekkeniTests/Pods-DekkeniTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4D3A720523036C41004F9ED0 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		4D64981422B78438007023CD /* Dekkeni.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dekkeni.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D64981722B78438007023CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D64981E22B78438007023CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				4D64981D22B78438007023CD /* Main.storyboard */,
 				4D6B6DA622BA75F000AE960B /* LaunchScreen.storyboard */,
 				4DAC63182300B77A006D9C57 /* StoreViewController.swift */,
+				4D3A720523036C41004F9ED0 /* DetailsViewController.swift */,
 				4DAC631E2300BC68006D9C57 /* WormStrip */,
 				4DAC631F2300CCEB006D9C57 /* StoreItemCell.swift */,
 				4DAC63212300CCFE006D9C57 /* StoreTableViewCell.xib */,
@@ -439,6 +442,7 @@
 				4DAC631B2300BA2D006D9C57 /* WormTabStrip.swift in Sources */,
 				4DBCC9A622B90FAD00EE16D6 /* StringUtils.swift in Sources */,
 				4D64981822B78438007023CD /* AppDelegate.swift in Sources */,
+				4D3A720623036C41004F9ED0 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

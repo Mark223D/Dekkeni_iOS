@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MLJ-pp-d5n">
-                                <rect key="frame" x="0.0" y="88" width="414" height="90"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="90"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Search" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="acU-Xe-Jmc">
                                         <rect key="frame" x="15" y="18" width="339.5" height="45"/>
@@ -72,6 +72,7 @@
                     <navigationItem key="navigationItem" id="NhP-RG-6pw"/>
                     <connections>
                         <outlet property="searchTextField" destination="acU-Xe-Jmc" id="rAc-dl-ewn"/>
+                        <segue destination="rrx-eG-Uv6" kind="show" identifier="toDetailsPage" id="Z0S-BC-hgC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j2g-AI-KMM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -83,14 +84,32 @@
             </objects>
             <point key="canvasLocation" x="2227.536231884058" y="214.95535714285714"/>
         </scene>
+        <!--Details View Controller-->
+        <scene sceneID="fz2-nH-8ZQ">
+            <objects>
+                <viewController id="rrx-eG-Uv6" customClass="DetailsViewController" customModule="Dekkeni" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nfx-9C-xyV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="auM-jx-rGw"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cuE-Yh-5DY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2996" y="214"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="wd0-ep-YFt">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fA0-n9-SDr" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="D1f-3b-qGw">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="D1f-3b-qGw">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.75686274509999996" green="0.25882352939999997" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.75686274509803919" green="0.25882352941176467" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

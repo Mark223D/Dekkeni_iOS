@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 
         UINavigationBar.appearance().barStyle = .blackOpaque
-        UINavigationBar.appearance().backgroundColor = .red
+        UINavigationBar.appearance().backgroundColor = UIColor(hue: 10, saturation: 90, brightness: 76, alpha: 1)
         return true
     }
 

@@ -24,7 +24,11 @@ class StoreViewController: UIViewController {
         "Confectionery",
         "Tobacco & Co"
     ]
-
+    
+    var lists: [UICollectionView] = [
+        
+    ]
+    
     lazy var viewPager: WormTabStrip = {
         let frame =  CGRect(x: 0, y: 90, width: self.view.frame.size.width, height: self.view.frame.size.height)
         
@@ -40,18 +44,18 @@ class StoreViewController: UIViewController {
         view.buildUI()
         return view
     }()
-    
     lazy var dataSource : [StoreItemCellContent] = [
-                                StoreItemCellContent(title: "Chips", description: "Lays Chips Bag 100g", quantity: 0, price: "1.00"),
-                                 StoreItemCellContent(title: "Chocolate", description: "Cadbury 10g", quantity: 0, price: "1.50"),
-                                  StoreItemCellContent(title: "Bread", description: "Bread Bag 500g", quantity: 0, price: "2.50"),
-                                   StoreItemCellContent(title: "Milk", description: "Milk Carton 1L", quantity: 0, price: "3.50"),
-                                   StoreItemCellContent(title: "Chips", description: "Lays Chips Bag 100g", quantity: 0, price: "1.00"),
-                                   StoreItemCellContent(title: "Chocolate", description: "Cadbury 10g", quantity: 0, price: "1.50"),
-                                   StoreItemCellContent(title: "Bread", description: "Bread Bag 500g", quantity: 0, price: "2.50"),
-                                   StoreItemCellContent(title: "Milk", description: "Milk Carton 1L", quantity: 0, price: "3.50"),
+        StoreItemCellContent(id: 0, title: "Chips", description: "Lays Chips Bag 100g", quantity: 0, price: "1.00"),
+        StoreItemCellContent(id: 1,title: "Chocolate", description: "Cadbury 10g", quantity: 0, price: "1.50"),
+        StoreItemCellContent(id: 2,title: "Bread", description: "Bread Bag 500g", quantity: 0, price: "2.50"),
+        StoreItemCellContent(id: 3, title: "Milk", description: "Milk Carton 1L", quantity: 0, price: "3.50"),
+        StoreItemCellContent(id: 4, title: "Chips", description: "Lays Chips Bag 100g", quantity: 0, price: "1.00"),
+        StoreItemCellContent(id: 5, title: "Chocolate", description: "Cadbury 10g", quantity: 0, price: "1.50"),
+        StoreItemCellContent(id: 6, title: "Bread", description: "Bread Bag 500g", quantity: 0, price: "2.50"),
+        StoreItemCellContent(id: 7, title: "Milk", description: "Milk Carton 1L", quantity: 0, price: "3.50"),
     ]
 
+    var selectedContent:StoreItemCellContent?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -60,11 +64,30 @@ class StoreViewController: UIViewController {
         styleStatusBar()
 
         self.view.addSubview(self.viewPager)
+    
 
-        
+        NotificationCenter.default.addObserver(forName: Notification.Name("openDetails"), object: nil, queue: nil, using: detailsClick)
         
         
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailsPage"{
+            let object = self.selectedContent
+            let controller = segue.destination as! DetailsViewController
+            controller.content = object
+        }
+    }
+    
+    
+    func detailsClick(notification:Notification) -> Void {
+        guard let contentID = notification.userInfo!["id"] as? Int else { return }
+        self.selectedContent = dataSource[(contentID)]
+        self.performSegue(withIdentifier: "toDetailsPage", sender: self)
+        
+    }
+    
     func styleStatusBar(){
         
         UINavigationBar.appearance().clipsToBounds = true
@@ -112,11 +135,11 @@ extension StoreViewController: WormTabStripDelegate{
         collectionView.backgroundColor = .white
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.allowsMultipleSelection = true
         collectionView.allowsSelection = true
         collectionView.register(UINib(nibName: "StoreTableViewCell", bundle: nil), forCellWithReuseIdentifier: "StoreItem")
-        
+
         view.addSubview(collectionView)
+        self.lists.append(collectionView)
         
         return view
     }
@@ -141,14 +164,12 @@ extension StoreViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoreItem", for: indexPath) as! StoreItemCell
         cell.setContent(content: dataSource[indexPath.row])
         
-//        
-//        cell.layer.borderColor = UIColor.lightGray.cgColor
-//        cell.layer.borderWidth = 1
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("test")
     }
+    
     
    
     
