@@ -10,21 +10,50 @@ import UIKit
 
 class DetailsViewController: UIViewController {
 
+    @IBOutlet weak var itemImageView: UIImageView!
+    @IBOutlet weak var itemTitleLabel: UILabel!
+    @IBOutlet weak var itemPriceLabel: UILabel!
+    
+    @IBOutlet weak var minusBtn: UIButton!
+    
+    @IBOutlet weak var quantityLabel: UILabel!
+    
+    @IBOutlet weak var plusBtn: UIButton!
+    @IBOutlet weak var categoryLabel: UILabel!
+    
+    @IBOutlet weak var descriptionTextView: UITextView!
     var content : StoreItemCellContent?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.backgroundColor = .red
         self.navigationController?.navigationBar.backgroundColor = .red
-        
-        let label = UILabel(frame: CGRect(x: 100, y: 100, width: 100, height: 50))
-        self.view.addSubview(label)
 
+
+        let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
+        UINavigationBar.appearance().clipsToBounds = true
+
+        statusBar.backgroundColor = UIColor.red
         guard let content = self.content else{
-            label.text = "No Data"
             return
         }
-        label.text = content.title
+        self.itemTitleLabel.text = content.title
+        self.itemPriceLabel.text = "$ \(content.price ?? "error")"
+        self.categoryLabel.text = content.category
+        self.descriptionTextView.text = content.description
+//        guard let image = content.image else{
+//            return nil
+//        }
+        self.minusBtn.layer.borderWidth = 1
+        self.minusBtn.layer.borderColor = UIColor.green.cgColor
+        
+        self.plusBtn.layer.borderWidth = 1
+        self.plusBtn.layer.borderColor = UIColor.green.cgColor
+        
+        
+        self.itemImageView.clipsToBounds = true
+         self.itemImageView.layer.cornerRadius = self.itemImageView.frame.height/15
+         self.itemImageView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
         // Do any additional setup after loading the view.
     }
     

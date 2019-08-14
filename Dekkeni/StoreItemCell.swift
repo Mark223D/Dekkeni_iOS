@@ -11,16 +11,18 @@ import UIKit
 class StoreItemCellContent {
     var id: Int?
     var title: String?
+    var category: String?
     var description: String?
     var quantity: Int?
     var price: String?
     var expanded: Bool?
     
-    init(id: Int, title: String, description: String,
+    init(id: Int, title: String, category: String,description: String,
          quantity:Int,
          price: String) {
         self.id = id
         self.title = title
+        self.category = category
         self.description = description
         self.price = price
         self.quantity = 0
@@ -33,23 +35,34 @@ class StoreItemCellContent {
 @IBDesignable
 class StoreItemCell: UICollectionViewCell {
     
+    
     @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var quantityLabel: UILabel!
     
     @IBOutlet weak var imageButton: UIButton!
+    @IBOutlet weak var plusBtn: UIButton!
     
+    @IBOutlet weak var minusBtn: UIButton!
     var tapped: Bool = false
    
+    @IBOutlet weak var quantifierStackView: UIStackView!
     var content: StoreItemCellContent?
     
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        productImageView.cornerRadius = 5
-
+        productImageView.cornerRadius = 13
+        self.minusBtn.layer.borderWidth = 1
+        self.minusBtn.layer.borderColor = UIColor.green.cgColor
+        
+        self.plusBtn.layer.borderWidth = 1
+        self.plusBtn.layer.borderColor = UIColor.green.cgColor
+        
+    self.quantifierStackView.layer.borderWidth = 1
+        self.quantifierStackView.layer.borderColor = UIColor.green.cgColor
+        
     }
     
     @IBAction func imagePressed(_ sender: Any) {
@@ -66,7 +79,6 @@ class StoreItemCell: UICollectionViewCell {
     func setContent(content: StoreItemCellContent){
         self.content = content
         self.titleLabel.text = content.title
-        self.descriptionLabel.text = content.expanded! ? content.description : content.title
         self.priceLabel.text = "$\(content.price ?? "0.00")"
         self.quantityLabel.text = "\(content.quantity ?? 0 )"
         

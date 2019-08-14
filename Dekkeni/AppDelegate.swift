@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FAPanels
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let leftMenuVC: MenuViewController = mainStoryboard.instantiateViewController(withIdentifier: "LeftMenuVC") as! MenuViewController
+  
+        let centerVC: StoreViewController = mainStoryboard.instantiateViewController(withIdentifier: "StoreVC") as! StoreViewController
         
+        let centerNavVC = UINavigationController(rootViewController: centerVC)
 
         UINavigationBar.appearance().barStyle = .blackOpaque
         UINavigationBar.appearance().backgroundColor = UIColor(hue: 10, saturation: 90, brightness: 76, alpha: 1)

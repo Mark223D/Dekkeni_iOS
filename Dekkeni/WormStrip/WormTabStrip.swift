@@ -198,9 +198,8 @@ public class WormTabStrip: UIView,UIScrollViewDelegate {
         contentScrollView.showsHorizontalScrollIndicator = false
         contentScrollView.showsVerticalScrollIndicator = false
         contentScrollView.bounces = false
-//        contentScrollView.panGestureRecognizer.addTarget(self, action: #selector(scrollHandleUIPanGestureRecognizer))
-//        contentScrollView.panGestureRecognizer.delaysTouchesBegan = true
-        contentScrollView.isScrollEnabled = false
+        contentScrollView.panGestureRecognizer.addTarget(self, action: #selector(scrollHandleUIPanGestureRecognizer))
+        contentScrollView.panGestureRecognizer.delaysTouchesBegan = true
         self.addSubview(contentScrollView)
     }
     

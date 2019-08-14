@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FAPanels
 
 class StoreViewController: UIViewController {
     
@@ -25,9 +26,7 @@ class StoreViewController: UIViewController {
         "Tobacco & Co"
     ]
     
-    var lists: [UICollectionView] = [
-        
-    ]
+    var lists: [UICollectionView] = []
     
     lazy var viewPager: WormTabStrip = {
         let frame =  CGRect(x: 0, y: 90, width: self.view.frame.size.width, height: self.view.frame.size.height)
@@ -44,15 +43,17 @@ class StoreViewController: UIViewController {
         view.buildUI()
         return view
     }()
+    
+    
     lazy var dataSource : [StoreItemCellContent] = [
-        StoreItemCellContent(id: 0, title: "Chips", description: "Lays Chips Bag 100g", quantity: 0, price: "1.00"),
-        StoreItemCellContent(id: 1,title: "Chocolate", description: "Cadbury 10g", quantity: 0, price: "1.50"),
-        StoreItemCellContent(id: 2,title: "Bread", description: "Bread Bag 500g", quantity: 0, price: "2.50"),
-        StoreItemCellContent(id: 3, title: "Milk", description: "Milk Carton 1L", quantity: 0, price: "3.50"),
-        StoreItemCellContent(id: 4, title: "Chips", description: "Lays Chips Bag 100g", quantity: 0, price: "1.00"),
-        StoreItemCellContent(id: 5, title: "Chocolate", description: "Cadbury 10g", quantity: 0, price: "1.50"),
-        StoreItemCellContent(id: 6, title: "Bread", description: "Bread Bag 500g", quantity: 0, price: "2.50"),
-        StoreItemCellContent(id: 7, title: "Milk", description: "Milk Carton 1L", quantity: 0, price: "3.50"),
+        StoreItemCellContent(id: 0, title: "Chips", category: "Fresh", description: "Lays Chips Bag 100g", quantity: 0, price: "1.00"),
+        StoreItemCellContent(id: 1,title: "Chocolate",category: "Fresh", description: "Cadbury 10g", quantity: 0, price: "1.50"),
+        StoreItemCellContent(id: 2,title: "Bread", category: "Fresh", description: "Bread Bag 500g", quantity: 0, price: "2.50"),
+        StoreItemCellContent(id: 3, title: "Milk", category: "Fresh", description: "Milk Carton 1L", quantity: 0, price: "3.50"),
+        StoreItemCellContent(id: 4, title: "Chips", category: "Fresh", description: "Lays Chips Bag 100g", quantity: 0, price: "1.00"),
+        StoreItemCellContent(id: 5, title: "Chocolate", category: "Fresh", description: "Cadbury 10g", quantity: 0, price: "1.50"),
+        StoreItemCellContent(id: 6, title: "Bread", category: "Fresh", description: "Bread Bag 500g", quantity: 0, price: "2.50"),
+        StoreItemCellContent(id: 7, title: "Milk", category: "Fresh", description: "Milk Carton 1L", quantity: 0, price: "3.50"),
     ]
 
     var selectedContent:StoreItemCellContent?
@@ -132,7 +133,7 @@ extension StoreViewController: WormTabStripDelegate{
         let view = UIView(frame: CGRect(x: self.view.frame.origin.x, y: self.view.frame.origin.y, width: self.view.frame.width, height: 90))
         let flowLayout = UICollectionViewFlowLayout.init()
         let collectionView = UICollectionView(frame: CGRect(x: self.view.frame.origin.x, y: self.view.frame.origin.y, width: self.view.frame.width, height: self.view.frame.height-view.frame.height), collectionViewLayout: flowLayout)
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = UIColor(displayP3Red: 193/255, green: 66/255, blue: 40/255, alpha: 0.05)
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.allowsSelection = true
@@ -163,7 +164,8 @@ extension StoreViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoreItem", for: indexPath) as! StoreItemCell
         cell.setContent(content: dataSource[indexPath.row])
-        
+        cell.layer.borderColor = UIColor(displayP3Red: 193/255, green: 66/255, blue: 40/255, alpha: 0.1).cgColor
+        cell.layer.borderWidth = 1
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -179,11 +181,11 @@ extension StoreViewController: UICollectionViewDelegate, UICollectionViewDelegat
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets
     {
-        return UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
+        return UIEdgeInsets(top: 10, left: 10, bottom: 80, right: 10)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let leftAndRightPaddings: CGFloat = 10
+        let leftAndRightPaddings: CGFloat = 30
                 let numberOfItemsPerRow: CGFloat = 2.0
                 let width = (screenSize.width-leftAndRightPaddings)/numberOfItemsPerRow
                 return CGSize(width: width, height: width*1.4)

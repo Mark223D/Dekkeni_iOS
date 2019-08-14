@@ -20,47 +20,37 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VRb-5x-2be">
-                        <rect key="frame" x="20" y="47" width="258" height="234"/>
+                        <rect key="frame" x="20" y="54" width="258" height="234"/>
                         <color key="backgroundColor" red="0.87450980389999999" green="0.67450980390000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Jh-9i-xx5">
-                        <rect key="frame" x="20" y="291" width="258" height="23.5"/>
+                        <rect key="frame" x="20" y="298" width="258" height="22.5"/>
                         <attributedString key="attributedText">
                             <fragment content="Label">
                                 <attributes>
-                                    <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                    <font key="NSFont" size="21" name="Arial-BoldMT"/>
+                                    <color key="NSColor" red="0.091867275540000001" green="0.1154149547" blue="0.14701038599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <font key="NSFont" size="20" name="Arial-BoldMT"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                 </attributes>
                             </fragment>
                         </attributedString>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OoH-qt-nAS">
-                        <rect key="frame" x="20" y="319.5" width="37" height="14"/>
-                        <attributedString key="attributedText">
-                            <fragment content="Label">
-                                <attributes>
-                                    <font key="NSFont" size="15" name="ArialMT"/>
-                                </attributes>
-                            </fragment>
-                        </attributedString>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1dR-jk-bjm">
-                        <rect key="frame" x="228" y="315.5" width="50" height="21.5"/>
+                        <rect key="frame" x="129.5" y="325.5" width="39.5" height="18"/>
                         <attributedString key="attributedText">
                             <fragment content="Label">
                                 <attributes>
-                                    <font key="NSFont" size="19" name="Arial-BoldMT"/>
-                                    <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    <color key="NSColor" red="0.091867275540000001" green="0.1154149547" blue="0.14701038599999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <font key="NSFont" size="16" name="ArialMT"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                 </attributes>
                             </fragment>
                         </attributedString>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rDr-RQ-8qd">
-                        <rect key="frame" x="30" y="430" width="238" height="2"/>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rDr-RQ-8qd">
+                        <rect key="frame" x="15" y="433" width="268" height="2"/>
                         <color key="backgroundColor" red="0.75686274509999996" green="0.25882352939999997" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="2" id="LwQ-cZ-fZO"/>
@@ -72,17 +62,17 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aln-Sf-Cbk">
-                        <rect key="frame" x="20" y="338.5" width="258" height="65.5"/>
+                        <rect key="frame" x="59.5" y="364.5" width="179" height="59.5"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AGn-Mb-uzx">
-                                <rect key="frame" x="0.0" y="0.0" width="86" height="65.5"/>
-                                <color key="backgroundColor" red="0.47843137250000001" green="0.80784313730000001" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="0.0" width="59.5" height="59.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.47843137250000001" green="0.80784313730000001" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="-">
                                             <attributes>
-                                                <font key="NSFont" size="30" name="Arial-BoldMT"/>
+                                                <font key="NSFont" size="26" name="Arial-BoldMT"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -98,7 +88,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7q-EM-YmI">
-                                <rect key="frame" x="86" y="0.0" width="86" height="65.5"/>
+                                <rect key="frame" x="59.5" y="0.0" width="60" height="59.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="0">
                                         <attributes>
@@ -110,14 +100,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UuC-va-Tx7">
-                                <rect key="frame" x="172" y="0.0" width="86" height="65.5"/>
-                                <color key="backgroundColor" red="0.47843137250000001" green="0.80784313730000001" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="119.5" y="0.0" width="59.5" height="59.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.47843137250000001" green="0.80784313730000001" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="+">
                                             <attributes>
-                                                <font key="NSFont" size="30" name="Arial-BoldMT"/>
+                                                <color key="NSColor" red="0.47843137250000001" green="0.80784313730000001" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="26" name="Arial-BoldMT"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -132,9 +123,12 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="aln-Sf-Cbk" secondAttribute="height" multiplier="90:30" id="KTx-uc-kok"/>
+                        </constraints>
                     </stackView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xf-pc-KxV">
-                        <rect key="frame" x="20" y="47" width="258" height="234"/>
+                        <rect key="frame" x="20" y="54" width="258" height="234"/>
                         <connections>
                             <action selector="imagePressed:" destination="N1v-dz-pc0" eventType="touchUpInside" id="15g-HX-MNu"/>
                         </connections>
@@ -143,38 +137,41 @@
             </view>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="OoH-qt-nAS" firstAttribute="top" secondItem="9Jh-9i-xx5" secondAttribute="bottom" constant="5" id="6A7-TW-tIv"/>
                 <constraint firstItem="rDr-RQ-8qd" firstAttribute="centerX" secondItem="K0Z-PU-avm" secondAttribute="centerX" id="7ct-8t-Rx6"/>
                 <constraint firstItem="4xf-pc-KxV" firstAttribute="width" secondItem="VRb-5x-2be" secondAttribute="width" id="D1l-ec-rsi"/>
                 <constraint firstItem="4xf-pc-KxV" firstAttribute="centerX" secondItem="VRb-5x-2be" secondAttribute="centerX" id="GCL-Yh-4g6"/>
                 <constraint firstItem="9Jh-9i-xx5" firstAttribute="width" secondItem="VRb-5x-2be" secondAttribute="width" id="JG7-4y-GkK"/>
-                <constraint firstItem="rDr-RQ-8qd" firstAttribute="width" secondItem="N1v-dz-pc0" secondAttribute="width" multiplier="0.8" id="NTu-iO-5TM"/>
+                <constraint firstItem="1dR-jk-bjm" firstAttribute="centerX" secondItem="4xf-pc-KxV" secondAttribute="centerX" id="Kcx-d2-7T9"/>
+                <constraint firstItem="rDr-RQ-8qd" firstAttribute="width" secondItem="N1v-dz-pc0" secondAttribute="width" multiplier="0.9" id="NTu-iO-5TM"/>
                 <constraint firstItem="9Jh-9i-xx5" firstAttribute="top" secondItem="VRb-5x-2be" secondAttribute="bottom" constant="10" id="QKk-mY-6pX"/>
-                <constraint firstItem="aln-Sf-Cbk" firstAttribute="bottom" secondItem="K0Z-PU-avm" secondAttribute="bottom" constant="-30" id="RWF-11-jnh"/>
-                <constraint firstItem="OoH-qt-nAS" firstAttribute="centerY" secondItem="1dR-jk-bjm" secondAttribute="centerY" id="Xr5-Gh-VQu"/>
+                <constraint firstItem="aln-Sf-Cbk" firstAttribute="bottom" secondItem="K0Z-PU-avm" secondAttribute="bottom" constant="-10" id="RWF-11-jnh"/>
                 <constraint firstItem="4xf-pc-KxV" firstAttribute="centerY" secondItem="VRb-5x-2be" secondAttribute="centerY" id="ZzQ-O8-aPV"/>
-                <constraint firstItem="aln-Sf-Cbk" firstAttribute="height" secondItem="N1v-dz-pc0" secondAttribute="height" multiplier="0.14" id="etk-uU-7Wg"/>
-                <constraint firstItem="OoH-qt-nAS" firstAttribute="leading" secondItem="VRb-5x-2be" secondAttribute="leading" id="gxV-zR-3Rq"/>
+                <constraint firstItem="aln-Sf-Cbk" firstAttribute="width" secondItem="N1v-dz-pc0" secondAttribute="width" multiplier="0.6" id="etk-uU-7Wg"/>
                 <constraint firstItem="VRb-5x-2be" firstAttribute="leading" secondItem="K0Z-PU-avm" secondAttribute="leading" constant="20" id="hta-xo-ZeX"/>
                 <constraint firstItem="4xf-pc-KxV" firstAttribute="height" secondItem="VRb-5x-2be" secondAttribute="height" id="j0d-Dp-SkJ"/>
                 <constraint firstItem="K0Z-PU-avm" firstAttribute="trailing" secondItem="VRb-5x-2be" secondAttribute="trailing" constant="20" id="jue-GQ-Rhg"/>
                 <constraint firstItem="9Jh-9i-xx5" firstAttribute="centerX" secondItem="VRb-5x-2be" secondAttribute="centerX" id="mfp-hd-eE5"/>
                 <constraint firstItem="VRb-5x-2be" firstAttribute="height" secondItem="N1v-dz-pc0" secondAttribute="height" multiplier="0.5" id="nIT-qt-WAD"/>
-                <constraint firstItem="aln-Sf-Cbk" firstAttribute="width" secondItem="VRb-5x-2be" secondAttribute="width" id="oFB-Oc-bMh"/>
-                <constraint firstItem="aln-Sf-Cbk" firstAttribute="top" secondItem="OoH-qt-nAS" secondAttribute="bottom" constant="5" id="oIo-KC-YXz"/>
-                <constraint firstItem="K0Z-PU-avm" firstAttribute="top" secondItem="VRb-5x-2be" secondAttribute="top" constant="-3" id="t3x-Xg-0DJ"/>
-                <constraint firstItem="1dR-jk-bjm" firstAttribute="trailing" secondItem="VRb-5x-2be" secondAttribute="trailing" id="tGf-22-ONV"/>
-                <constraint firstItem="K0Z-PU-avm" firstAttribute="bottom" secondItem="rDr-RQ-8qd" secondAttribute="bottom" constant="2" id="ty6-qY-jcf"/>
+                <constraint firstItem="1dR-jk-bjm" firstAttribute="top" secondItem="9Jh-9i-xx5" secondAttribute="bottom" constant="5" id="rVE-Ov-lhb"/>
+                <constraint firstItem="4xf-pc-KxV" firstAttribute="top" secondItem="K0Z-PU-avm" secondAttribute="top" constant="10" id="s9m-Sj-IuP"/>
+                <constraint firstItem="K0Z-PU-avm" firstAttribute="bottom" secondItem="rDr-RQ-8qd" secondAttribute="bottom" constant="-1" id="ty6-qY-jcf"/>
                 <constraint firstItem="VRb-5x-2be" firstAttribute="centerX" secondItem="K0Z-PU-avm" secondAttribute="centerX" id="w46-CT-Nlg"/>
                 <constraint firstItem="aln-Sf-Cbk" firstAttribute="centerX" secondItem="K0Z-PU-avm" secondAttribute="centerX" id="zww-xK-rhW"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="K0Z-PU-avm"/>
             <size key="customSize" width="298" height="468"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="12"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <connections>
-                <outlet property="descriptionLabel" destination="OoH-qt-nAS" id="Oa8-kL-dbd"/>
                 <outlet property="imageButton" destination="4xf-pc-KxV" id="pJc-GP-qYZ"/>
+                <outlet property="minusBtn" destination="AGn-Mb-uzx" id="NXh-lD-Y1a"/>
+                <outlet property="plusBtn" destination="UuC-va-Tx7" id="VEb-Cn-qj6"/>
                 <outlet property="priceLabel" destination="1dR-jk-bjm" id="COj-xT-Gsv"/>
                 <outlet property="productImageView" destination="VRb-5x-2be" id="eeM-ZX-hPO"/>
+                <outlet property="quantifierStackView" destination="aln-Sf-Cbk" id="06E-RV-dfg"/>
                 <outlet property="quantityLabel" destination="p7q-EM-YmI" id="qIy-fR-YoV"/>
                 <outlet property="titleLabel" destination="9Jh-9i-xx5" id="ZZB-ah-t05"/>
             </connections>
