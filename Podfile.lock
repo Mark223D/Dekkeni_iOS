@@ -1,20 +1,16 @@
 PODS:
-  - FAPanels (1.0.2)
   - pop (1.0.12)
 
 DEPENDENCIES:
-  - FAPanels
   - pop
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - FAPanels
     - pop
 
 SPEC CHECKSUMS:
-  FAPanels: 520037c53f4ded152e8e6103d97f79b644473363
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
 
-PODFILE CHECKSUM: 472322347bd640a8a23d9232e38f9cbc240e1669
+PODFILE CHECKSUM: d85f6470c438ae8f64de9c0146ead1c1a413fe4a
 
 COCOAPODS: 1.5.3

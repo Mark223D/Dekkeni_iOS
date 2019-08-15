@@ -10,6 +10,17 @@
 		3B6F9FCA203FF6798088ADC4 /* Pods_DekkeniUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B24F2A20318A286E41A5D33 /* Pods_DekkeniUITests.framework */; };
 		4D3A720623036C41004F9ED0 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A720523036C41004F9ED0 /* DetailsViewController.swift */; };
 		4D3A72082304B50A004F9ED0 /* View+borders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A72072304B50A004F9ED0 /* View+borders.swift */; };
+		4D3A721F2304D8D2004F9ED0 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A721E2304D8D2004F9ED0 /* MenuViewController.swift */; };
+		4D3A72202304DB49004F9ED0 /* FAPanel+Gestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A720C2304D65B004F9ED0 /* FAPanel+Gestures.swift */; };
+		4D3A72212304DB49004F9ED0 /* Collection+FAPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A72092304D65B004F9ED0 /* Collection+FAPanel.swift */; };
+		4D3A72222304DB49004F9ED0 /* UIView+FAPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A72112304D65B004F9ED0 /* UIView+FAPanel.swift */; };
+		4D3A72232304DB49004F9ED0 /* FAPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A720A2304D65B004F9ED0 /* FAPanel.swift */; };
+		4D3A72242304DB49004F9ED0 /* FAPanel+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A720B2304D65B004F9ED0 /* FAPanel+Animations.swift */; };
+		4D3A72252304DB49004F9ED0 /* FAPanelConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A720F2304D65B004F9ED0 /* FAPanelConfigurations.swift */; };
+		4D3A72262304DB49004F9ED0 /* FAPanel+KVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A720E2304D65B004F9ED0 /* FAPanel+KVO.swift */; };
+		4D3A72272304DB49004F9ED0 /* UIImage+FAPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A72102304D65B004F9ED0 /* UIImage+FAPanel.swift */; };
+		4D3A72282304DB49004F9ED0 /* UIViewController+FAPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A72122304D65B004F9ED0 /* UIViewController+FAPanel.swift */; };
+		4D3A72292304DB49004F9ED0 /* FAPanel+InterfaceRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3A720D2304D65B004F9ED0 /* FAPanel+InterfaceRotation.swift */; };
 		4D64981822B78438007023CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D64981722B78438007023CD /* AppDelegate.swift */; };
 		4D64981F22B78438007023CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D64981D22B78438007023CD /* Main.storyboard */; };
 		4D64982F22B7843A007023CD /* DekkeniTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D64982E22B7843A007023CD /* DekkeniTests.swift */; };
@@ -54,22 +65,17 @@
 		2C113DACA45B64DF264BBF0C /* Pods-DekkeniTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DekkeniTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DekkeniTests/Pods-DekkeniTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4D3A720523036C41004F9ED0 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		4D3A72072304B50A004F9ED0 /* View+borders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+borders.swift"; sourceTree = "<group>"; };
-		4D3A72092304D65B004F9ED0 /* Collection+FAPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Collection+FAPanel.swift"; path = "FAPanels/Classes/Collection+FAPanel.swift"; sourceTree = "<group>"; };
-		4D3A720A2304D65B004F9ED0 /* FAPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FAPanel.swift; path = FAPanels/Classes/FAPanel.swift; sourceTree = "<group>"; };
-		4D3A720B2304D65B004F9ED0 /* FAPanel+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FAPanel+Animations.swift"; path = "FAPanels/Classes/FAPanel+Animations.swift"; sourceTree = "<group>"; };
-		4D3A720C2304D65B004F9ED0 /* FAPanel+Gestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FAPanel+Gestures.swift"; path = "FAPanels/Classes/FAPanel+Gestures.swift"; sourceTree = "<group>"; };
-		4D3A720D2304D65B004F9ED0 /* FAPanel+InterfaceRotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FAPanel+InterfaceRotation.swift"; path = "FAPanels/Classes/FAPanel+InterfaceRotation.swift"; sourceTree = "<group>"; };
-		4D3A720E2304D65B004F9ED0 /* FAPanel+KVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FAPanel+KVO.swift"; path = "FAPanels/Classes/FAPanel+KVO.swift"; sourceTree = "<group>"; };
-		4D3A720F2304D65B004F9ED0 /* FAPanelConfigurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FAPanelConfigurations.swift; path = FAPanels/Classes/FAPanelConfigurations.swift; sourceTree = "<group>"; };
-		4D3A72102304D65B004F9ED0 /* UIImage+FAPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIImage+FAPanel.swift"; path = "FAPanels/Classes/UIImage+FAPanel.swift"; sourceTree = "<group>"; };
-		4D3A72112304D65B004F9ED0 /* UIView+FAPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+FAPanel.swift"; path = "FAPanels/Classes/UIView+FAPanel.swift"; sourceTree = "<group>"; };
-		4D3A72122304D65B004F9ED0 /* UIViewController+FAPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIViewController+FAPanel.swift"; path = "FAPanels/Classes/UIViewController+FAPanel.swift"; sourceTree = "<group>"; };
-		4D3A72132304D65B004F9ED0 /* FAPanels.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = FAPanels.modulemap; path = "Dekkeni/Target Support Files/FAPanels/FAPanels.modulemap"; sourceTree = "<group>"; };
-		4D3A72142304D65B004F9ED0 /* FAPanels.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = FAPanels.xcconfig; path = "Dekkeni/Target Support Files/FAPanels/FAPanels.xcconfig"; sourceTree = "<group>"; };
-		4D3A72152304D65B004F9ED0 /* FAPanels-dummy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "FAPanels-dummy.m"; path = "Dekkeni/Target Support Files/FAPanels/FAPanels-dummy.m"; sourceTree = "<group>"; };
-		4D3A72162304D65B004F9ED0 /* FAPanels-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "FAPanels-prefix.pch"; path = "Dekkeni/Target Support Files/FAPanels/FAPanels-prefix.pch"; sourceTree = "<group>"; };
-		4D3A72172304D65B004F9ED0 /* FAPanels-umbrella.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "FAPanels-umbrella.h"; path = "Dekkeni/Target Support Files/FAPanels/FAPanels-umbrella.h"; sourceTree = "<group>"; };
-		4D3A72182304D65B004F9ED0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = "Dekkeni/Target Support Files/FAPanels/Info.plist"; sourceTree = "<group>"; };
+		4D3A72092304D65B004F9ED0 /* Collection+FAPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+FAPanel.swift"; sourceTree = "<group>"; };
+		4D3A720A2304D65B004F9ED0 /* FAPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAPanel.swift; sourceTree = "<group>"; };
+		4D3A720B2304D65B004F9ED0 /* FAPanel+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FAPanel+Animations.swift"; sourceTree = "<group>"; };
+		4D3A720C2304D65B004F9ED0 /* FAPanel+Gestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FAPanel+Gestures.swift"; sourceTree = "<group>"; };
+		4D3A720D2304D65B004F9ED0 /* FAPanel+InterfaceRotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FAPanel+InterfaceRotation.swift"; sourceTree = "<group>"; };
+		4D3A720E2304D65B004F9ED0 /* FAPanel+KVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FAPanel+KVO.swift"; sourceTree = "<group>"; };
+		4D3A720F2304D65B004F9ED0 /* FAPanelConfigurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAPanelConfigurations.swift; sourceTree = "<group>"; };
+		4D3A72102304D65B004F9ED0 /* UIImage+FAPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+FAPanel.swift"; sourceTree = "<group>"; };
+		4D3A72112304D65B004F9ED0 /* UIView+FAPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+FAPanel.swift"; sourceTree = "<group>"; };
+		4D3A72122304D65B004F9ED0 /* UIViewController+FAPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+FAPanel.swift"; sourceTree = "<group>"; };
+		4D3A721E2304D8D2004F9ED0 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		4D64981422B78438007023CD /* Dekkeni.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dekkeni.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D64981722B78438007023CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D64981E22B78438007023CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -129,36 +135,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4D3A72192304D65B004F9ED0 /* Support Files */ = {
+		4D3A721C2304D7E9004F9ED0 /* Store */ = {
 			isa = PBXGroup;
 			children = (
-				4D3A72132304D65B004F9ED0 /* FAPanels.modulemap */,
-				4D3A72142304D65B004F9ED0 /* FAPanels.xcconfig */,
-				4D3A72152304D65B004F9ED0 /* FAPanels-dummy.m */,
-				4D3A72162304D65B004F9ED0 /* FAPanels-prefix.pch */,
-				4D3A72172304D65B004F9ED0 /* FAPanels-umbrella.h */,
-				4D3A72182304D65B004F9ED0 /* Info.plist */,
+				4DAC63182300B77A006D9C57 /* StoreViewController.swift */,
+				4D3A720523036C41004F9ED0 /* DetailsViewController.swift */,
+				4D3A721D2304D7F6004F9ED0 /* StoreItem */,
+				4DAC631E2300BC68006D9C57 /* WormStrip */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/FAPanels";
+			path = Store;
 			sourceTree = "<group>";
 		};
-		4D3A721A2304D65B004F9ED0 /* FAPanels */ = {
+		4D3A721D2304D7F6004F9ED0 /* StoreItem */ = {
 			isa = PBXGroup;
 			children = (
-				4D3A72092304D65B004F9ED0 /* Collection+FAPanel.swift */,
-				4D3A720A2304D65B004F9ED0 /* FAPanel.swift */,
-				4D3A720B2304D65B004F9ED0 /* FAPanel+Animations.swift */,
-				4D3A720C2304D65B004F9ED0 /* FAPanel+Gestures.swift */,
-				4D3A720D2304D65B004F9ED0 /* FAPanel+InterfaceRotation.swift */,
-				4D3A720E2304D65B004F9ED0 /* FAPanel+KVO.swift */,
-				4D3A720F2304D65B004F9ED0 /* FAPanelConfigurations.swift */,
-				4D3A72102304D65B004F9ED0 /* UIImage+FAPanel.swift */,
-				4D3A72112304D65B004F9ED0 /* UIView+FAPanel.swift */,
-				4D3A72122304D65B004F9ED0 /* UIViewController+FAPanel.swift */,
-				4D3A72192304D65B004F9ED0 /* Support Files */,
+				4DAC631F2300CCEB006D9C57 /* StoreItemCell.swift */,
+				4DAC63212300CCFE006D9C57 /* StoreTableViewCell.xib */,
 			);
-			path = FAPanels;
+			path = StoreItem;
 			sourceTree = "<group>";
 		};
 		4D64980B22B78438007023CD = {
@@ -187,6 +181,16 @@
 			isa = PBXGroup;
 			children = (
 				4DAC63232301BA07006D9C57 /* Assets.xcassets */,
+				4D3A72092304D65B004F9ED0 /* Collection+FAPanel.swift */,
+				4D3A720A2304D65B004F9ED0 /* FAPanel.swift */,
+				4D3A720B2304D65B004F9ED0 /* FAPanel+Animations.swift */,
+				4D3A720C2304D65B004F9ED0 /* FAPanel+Gestures.swift */,
+				4D3A720D2304D65B004F9ED0 /* FAPanel+InterfaceRotation.swift */,
+				4D3A720E2304D65B004F9ED0 /* FAPanel+KVO.swift */,
+				4D3A720F2304D65B004F9ED0 /* FAPanelConfigurations.swift */,
+				4D3A72102304D65B004F9ED0 /* UIImage+FAPanel.swift */,
+				4D3A72112304D65B004F9ED0 /* UIView+FAPanel.swift */,
+				4D3A72122304D65B004F9ED0 /* UIViewController+FAPanel.swift */,
 				4D64981722B78438007023CD /* AppDelegate.swift */,
 				4D64982522B7843A007023CD /* Info.plist */,
 				4D6B6D8322BA3B1400AE960B /* Colors.swift */,
@@ -195,14 +199,10 @@
 				4DBCC9A522B90FAD00EE16D6 /* StringUtils.swift */,
 				4D64981D22B78438007023CD /* Main.storyboard */,
 				4D6B6DA622BA75F000AE960B /* LaunchScreen.storyboard */,
-				4DAC63182300B77A006D9C57 /* StoreViewController.swift */,
-				4D3A720523036C41004F9ED0 /* DetailsViewController.swift */,
-				4DAC631E2300BC68006D9C57 /* WormStrip */,
-				4DAC631F2300CCEB006D9C57 /* StoreItemCell.swift */,
-				4DAC63212300CCFE006D9C57 /* StoreTableViewCell.xib */,
+				4D3A721C2304D7E9004F9ED0 /* Store */,
 				4DAC63252301E6E0006D9C57 /* TextField+icon.swift */,
 				4D3A72072304B50A004F9ED0 /* View+borders.swift */,
-				4D3A721A2304D65B004F9ED0 /* FAPanels */,
+				4D3A721E2304D8D2004F9ED0 /* MenuViewController.swift */,
 			);
 			path = Dekkeni;
 			sourceTree = "<group>";
@@ -465,14 +465,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Dekkeni/Pods-Dekkeni-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FAPanels/FAPanels.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FAPanels.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,16 +486,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DAC631D2300BA34006D9C57 /* WormTabStripButton.swift in Sources */,
+				4D3A72292304DB49004F9ED0 /* FAPanel+InterfaceRotation.swift in Sources */,
 				4D3A72082304B50A004F9ED0 /* View+borders.swift in Sources */,
+				4D3A72222304DB49004F9ED0 /* UIView+FAPanel.swift in Sources */,
+				4D3A72282304DB49004F9ED0 /* UIViewController+FAPanel.swift in Sources */,
+				4D3A72272304DB49004F9ED0 /* UIImage+FAPanel.swift in Sources */,
 				4DAC63192300B77A006D9C57 /* StoreViewController.swift in Sources */,
 				4DAC63262301E6E0006D9C57 /* TextField+icon.swift in Sources */,
 				4D6B6D9B22BA741200AE960B /* Helpers.swift in Sources */,
 				4DAC63202300CCEB006D9C57 /* StoreItemCell.swift in Sources */,
 				4D6B6D8422BA3B1400AE960B /* Colors.swift in Sources */,
+				4D3A72262304DB49004F9ED0 /* FAPanel+KVO.swift in Sources */,
+				4D3A72212304DB49004F9ED0 /* Collection+FAPanel.swift in Sources */,
+				4D3A72202304DB49004F9ED0 /* FAPanel+Gestures.swift in Sources */,
+				4D3A721F2304D8D2004F9ED0 /* MenuViewController.swift in Sources */,
 				4DAC631B2300BA2D006D9C57 /* WormTabStrip.swift in Sources */,
+				4D3A72252304DB49004F9ED0 /* FAPanelConfigurations.swift in Sources */,
 				4DBCC9A622B90FAD00EE16D6 /* StringUtils.swift in Sources */,
+				4D3A72242304DB49004F9ED0 /* FAPanel+Animations.swift in Sources */,
 				4D64981822B78438007023CD /* AppDelegate.swift in Sources */,
 				4D3A720623036C41004F9ED0 /* DetailsViewController.swift in Sources */,
+				4D3A72232304DB49004F9ED0 /* FAPanel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

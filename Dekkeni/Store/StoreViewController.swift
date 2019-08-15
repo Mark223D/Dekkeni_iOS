@@ -7,11 +7,9 @@
 //
 
 import UIKit
-import FAPanels
 
 class StoreViewController: UIViewController {
     
-    @IBOutlet weak var searchTextField: UITextField!
     let screenSize: CGRect = UIScreen.main.bounds
 
     
@@ -60,7 +58,6 @@ class StoreViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        searchTextField.setIcon(UIImage(named: "magnifier")!)
         
         styleStatusBar()
 
@@ -71,6 +68,8 @@ class StoreViewController: UIViewController {
         
         
     }
+    
+
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -98,10 +97,7 @@ class StoreViewController: UIViewController {
         statusBar.backgroundColor = UIColor.red
     }
     
-    @IBAction func tapAnywhere(_ sender: Any) {
-        searchTextField.resignFirstResponder()
-    }
-    
+
     
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
