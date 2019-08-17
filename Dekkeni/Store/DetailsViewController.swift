@@ -26,14 +26,9 @@ class DetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.backgroundColor = .red
-        self.navigationController?.navigationBar.backgroundColor = .red
+        self.navigationController?.navigationBar.barStyle = .blackOpaque
 
-
-        let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
-        UINavigationBar.appearance().clipsToBounds = true
-
-        statusBar.backgroundColor = UIColor.red
+        
         guard let content = self.content else{
             return
         }

@@ -39,6 +39,8 @@ class StoreViewController: UIViewController {
         view.currentTabIndex = 0
         view.shouldCenterSelectedWorm = true
         view.buildUI()
+        
+
         return view
     }()
     
@@ -67,9 +69,16 @@ class StoreViewController: UIViewController {
         NotificationCenter.default.addObserver(forName: Notification.Name("openDetails"), object: nil, queue: nil, using: detailsClick)
         
         
+        
+        panel?._centerPanelVC?.view.dropShadow(color: UIColor.black, opacity: 0.6, offSet: CGSize(width: 10, height: 70), radius: 30, scale: true)
     }
     
 
+    
+
+    @IBAction func menuBtnPressed(_ sender: Any) {
+        panel?.openLeft(animated: true, shouldBounce: true)
+    }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

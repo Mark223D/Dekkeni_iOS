@@ -21,21 +21,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
         let centerVC: StoreViewController = mainStoryboard.instantiateViewController(withIdentifier: "StoreVC") as! StoreViewController
         
-        let centerNavVC = UINavigationController(rootViewController: centerVC)
+        let navVC = UINavigationController(rootViewController: centerVC)
+        
+        window?.rootViewController = FAPanelController()
 
-        let rootController: FAPanelController = window?.rootViewController as! FAPanelController
         
-        rootController.configs.leftPanelWidth = 80
-        rootController.configs.bounceOnLeftPanelOpen = true
+        let rootVC: FAPanelController = window?.rootViewController as! FAPanelController
         
+        _ = rootVC.center(navVC).left(leftMenuVC)
         
-         _ = rootController.center(centerNavVC).left(leftMenuVC)
+        rootVC.leftPanelPosition = .back
+        rootVC.configs.leftPanelWidth = 80
+        rootVC.configs.bounceOnLeftPanelOpen = true
         
-         rootController.leftPanelPosition = .front
-        
-        
-        UINavigationBar.appearance().barStyle = .blackOpaque
-        UINavigationBar.appearance().backgroundColor = UIColor(hue: 10, saturation: 90, brightness: 76, alpha: 1)
+        UINavigationBar.appearance().barStyle = .blackTranslucent
+        UINavigationBar.appearance().backgroundColor = .red
+        UINavigationBar.appearance().tintColor = .white//UIColor(hue: 10, saturation: 90, brightness: 76, alpha: 1)
         return true
     }
 

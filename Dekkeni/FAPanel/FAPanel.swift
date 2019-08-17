@@ -179,6 +179,14 @@ open class FAPanelController: UIViewController {
         leftPanelContainer.layer.shadowOffset = configs.shadowOffset
         leftPanelContainer.layer.shadowOpacity = configs.shadowOppacity
         leftPanelContainer.layer.shadowPath = shadowPath.cgPath
+        
+        
+        let shadowPathC = UIBezierPath(rect: centerPanelContainer.bounds)
+        centerPanelContainer.layer.masksToBounds = false
+        centerPanelContainer.layer.shadowColor = configs.shadowColor
+        centerPanelContainer.layer.shadowOffset = configs.shadowOffset
+        centerPanelContainer.layer.shadowOpacity = configs.shadowOppacity
+        centerPanelContainer.layer.shadowPath = shadowPathC.cgPath
     }
     
     
