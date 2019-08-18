@@ -12,8 +12,19 @@ class StoreViewController: UIViewController {
     
     let screenSize: CGRect = UIScreen.main.bounds
 
-    
+    var showingSearch: Bool = false
+    lazy var searchBar: UISearchBar = {
+        let searchBar = UISearchBar()
+        searchBar.sizeToFit()
+    self.navigationController?.navigationBar.topItem?.titleView = searchBar
+        searchBar.placeholder = "Search..."
+        return searchBar
+    }()
+
     let titles = [
+        "Featured",
+        "Best Seller",
+        "New Arrivals",
         "Fresh",
         "Meat & Poultry",
         "Beverages",
@@ -27,7 +38,7 @@ class StoreViewController: UIViewController {
     var lists: [UICollectionView] = []
     
     lazy var viewPager: WormTabStrip = {
-        let frame =  CGRect(x: 0, y: 90, width: self.view.frame.size.width, height: self.view.frame.size.height)
+        let frame =  CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
         
         let view = WormTabStrip(frame: frame)
         view.delegate = self
@@ -45,6 +56,7 @@ class StoreViewController: UIViewController {
     }()
     
     
+    @IBOutlet weak var searchBtn: UIBarButtonItem!
     lazy var dataSource : [StoreItemCellContent] = [
         StoreItemCellContent(id: 0, title: "Chips", category: "Fresh", description: "Lays Chips Bag 100g", quantity: 0, price: "1.00"),
         StoreItemCellContent(id: 1,title: "Chocolate",category: "Fresh", description: "Cadbury 10g", quantity: 0, price: "1.50"),
@@ -57,27 +69,31 @@ class StoreViewController: UIViewController {
     ]
 
     var selectedContent:StoreItemCellContent?
+    
+    
+    
+    @IBOutlet weak var menuButton: UIBarButtonItem!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         
         styleStatusBar()
 
-        self.view.addSubview(self.viewPager)
-    
+        self.view.addSubview(viewPager)
+
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.barTintColor = .red
 
         NotificationCenter.default.addObserver(forName: Notification.Name("openDetails"), object: nil, queue: nil, using: detailsClick)
         
+        self.title = "Store"
         
-        
-        panel?._centerPanelVC?.view.dropShadow(color: UIColor.black, opacity: 0.6, offSet: CGSize(width: 10, height: 70), radius: 30, scale: true)
     }
     
-
-    
-
     @IBAction func menuBtnPressed(_ sender: Any) {
-        panel?.openLeft(animated: true, shouldBounce: true)
+        panel?.openLeft(animated: true)
     }
     
     
@@ -89,7 +105,25 @@ class StoreViewController: UIViewController {
         }
     }
     
+    @IBAction func searchPressed(_ sender: Any) {
+
+        searchToggle(self)
+    }
     
+    
+    @objc func searchToggle(_ sender: Any){
+        if !showingSearch{
+            self.searchBar.isHidden = false
+            showingSearch = true
+            
+        }else{
+            self.searchBar.isHidden = true
+            showingSearch = false
+            self.title = "Store"
+        }
+        let newButton = UIBarButtonItem(barButtonSystemItem: (self.showingSearch) ? .done : .search, target: self, action:#selector(searchToggle(_:)))
+        self.navigationItem.setRightBarButton(newButton, animated: true)
+    }
     func detailsClick(notification:Notification) -> Void {
         guard let contentID = notification.userInfo!["id"] as? Int else { return }
         self.selectedContent = dataSource[(contentID)]
@@ -104,6 +138,8 @@ class StoreViewController: UIViewController {
         let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
         
         statusBar.backgroundColor = UIColor.red
+        
+    
     }
     
 
@@ -117,12 +153,13 @@ class StoreViewController: UIViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        
         super.viewWillAppear(animated)
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+
         super.viewWillDisappear(animated)
     }
     
@@ -135,15 +172,22 @@ extension StoreViewController: WormTabStripDelegate{
     }
     
     func WTSViewOfTab(index: Int) -> UIView {
-        let view = UIView(frame: CGRect(x: self.view.frame.origin.x, y: self.view.frame.origin.y, width: self.view.frame.width, height: 90))
+        let tabPageX = self.view.frame.origin.x
+        let tabPageY = self.view.frame.origin.y
+        let tabPageW = self.view.frame.width
+        let tabPageH = self.view.frame.height
+
+        let view = UIView(frame: CGRect(x: tabPageX, y: tabPageY , width: tabPageW, height: tabPageH))
+
         let flowLayout = UICollectionViewFlowLayout.init()
-        let collectionView = UICollectionView(frame: CGRect(x: self.view.frame.origin.x, y: self.view.frame.origin.y, width: self.view.frame.width, height: self.view.frame.height-view.frame.height), collectionViewLayout: flowLayout)
+        let collectionView = UICollectionView(frame: CGRect(x: self.view.frame.origin.x, y: self.view.frame.origin.y, width: self.view.frame.width, height: view.frame.height ), collectionViewLayout: flowLayout)
         collectionView.backgroundColor = UIColor(displayP3Red: 193/255, green: 66/255, blue: 40/255, alpha: 0.05)
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.allowsSelection = true
         collectionView.register(UINib(nibName: "StoreTableViewCell", bundle: nil), forCellWithReuseIdentifier: "StoreItem")
 
+        
         view.addSubview(collectionView)
         self.lists.append(collectionView)
         
@@ -197,4 +241,19 @@ extension StoreViewController: UICollectionViewDelegate, UICollectionViewDelegat
     }
     
    
+}
+
+extension UIApplication {
+    var icon: UIImage? {
+        guard let iconsDictionary = Bundle.main.infoDictionary?["CFBundleIcons"] as? NSDictionary,
+            let primaryIconsDictionary = iconsDictionary["CFBundlePrimaryIcon"] as? NSDictionary,
+            let iconFiles = primaryIconsDictionary["CFBundleIconFiles"] as? NSArray,
+            // First will be smallest for the device class, last will be the largest for device class
+            let lastIcon = iconFiles.lastObject as? String,
+            let icon = UIImage(named: lastIcon) else {
+                return nil
+        }
+        
+        return icon
+    }
 }

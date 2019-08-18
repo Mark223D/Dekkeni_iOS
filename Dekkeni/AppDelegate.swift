@@ -33,10 +33,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         rootVC.leftPanelPosition = .back
         rootVC.configs.leftPanelWidth = 80
         rootVC.configs.bounceOnLeftPanelOpen = true
+rootVC.configs.panFromEdge = false
         
-        UINavigationBar.appearance().barStyle = .blackTranslucent
-        UINavigationBar.appearance().backgroundColor = .red
+        UINavigationBar.appearance().barStyle = .blackOpaque
         UINavigationBar.appearance().tintColor = .white//UIColor(hue: 10, saturation: 90, brightness: 76, alpha: 1)
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+
+        
         return true
     }
 

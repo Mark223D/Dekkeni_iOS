@@ -26,19 +26,19 @@ class DetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.barStyle = .blackOpaque
+//        self.navigationController?.navigationBar.barStyle = .blackOpaque
 
         
         guard let content = self.content else{
             return
         }
+        
         self.itemTitleLabel.text = content.title
         self.itemPriceLabel.text = "$ \(content.price ?? "error")"
         self.categoryLabel.text = content.category
         self.descriptionTextView.text = content.description
-//        guard let image = content.image else{
-//            return nil
-//        }
+
+        
         self.minusBtn.layer.borderWidth = 1
         self.minusBtn.layer.borderColor = UIColor.green.cgColor
         
@@ -48,19 +48,30 @@ class DetailsViewController: UIViewController {
         
         self.itemImageView.clipsToBounds = true
          self.itemImageView.layer.cornerRadius = self.itemImageView.frame.height/15
-         self.itemImageView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
-        // Do any additional setup after loading the view.
+
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.barTintColor = .red
+
+        self.navigationController?.navigationBar.backgroundColor = .red
+        
+
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func minusBtnPressed(_ sender: Any) {
+        if self.content?.quantity != 0
+        {
+            self.content?.quantity = self.content!.quantity! - 1
+            self.quantityLabel.text = "\(content!.quantity ?? 0 )"
+        }
+        else{
+            self.quantityLabel.text = "0"
+            
+        }
     }
-    */
-
+    
+    @IBAction func plusBtnPressed(_ sender: Any) {
+        self.content?.quantity = self.content!.quantity! + 1
+        self.quantityLabel.text = "\(content!.quantity ?? 0 )"
+    }
 }
