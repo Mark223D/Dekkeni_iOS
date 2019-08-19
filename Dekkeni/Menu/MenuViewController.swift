@@ -27,7 +27,8 @@ class MenuViewController: UIViewController {
     let menuContent:[MenuItemCellContent] = [
         MenuItemCellContent(title: "Profile", icon: UIImage(named: "avatar")!),
         MenuItemCellContent(title: "Store", icon: UIImage(named: "store")!),
-        MenuItemCellContent(title: "Currency", icon: UIImage(named: "currency")!),
+        MenuItemCellContent(title: "Log Out", icon: UIImage(named: "exit")!),
+        MenuItemCellContent(title: "Log In", icon: UIImage(named: "avatar")!)
     ]
     
     override func viewDidLoad() {
@@ -130,6 +131,15 @@ extension MenuViewController: UICollectionViewDataSource{
             
             _ = panel!.center(centerNavVC)
 
+        }
+        if indexPath.row == 3{
+            let settingsVC: LoginViewController = mainStoryboard.instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
+            
+            let centerNavVC = UINavigationController(rootViewController: settingsVC)
+            
+            
+            _ = panel!.center(centerNavVC)
+            
         }
         
         let cell = collectionView.cellForItem(at: indexPath) as! MenuItemCollectionViewCell

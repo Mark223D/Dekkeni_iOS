@@ -26,6 +26,7 @@
 		4D4240992308AD8900052AC4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4240982308AD8900052AC4 /* ProfileViewController.swift */; };
 		4D42409B2308ADC700052AC4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D42409A2308ADC700052AC4 /* SettingsViewController.swift */; };
 		4D4347E9230995BF00D05AF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D4347E8230995BE00D05AF8 /* Assets.xcassets */; };
+		4D48081B230B4E3C004E873F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D48081A230B4E3C004E873F /* LoginViewController.swift */; };
 		4D64981822B78438007023CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D64981722B78438007023CD /* AppDelegate.swift */; };
 		4D64981F22B78438007023CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D64981D22B78438007023CD /* Main.storyboard */; };
 		4D64982F22B7843A007023CD /* DekkeniTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D64982E22B7843A007023CD /* DekkeniTests.swift */; };
@@ -85,6 +86,7 @@
 		4D4240982308AD8900052AC4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		4D42409A2308ADC700052AC4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		4D4347E8230995BE00D05AF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4D48081A230B4E3C004E873F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4D64981422B78438007023CD /* Dekkeni.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dekkeni.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D64981722B78438007023CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D64981E22B78438007023CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 				4D4347EA23099A6100D05AF8 /* Profile */,
 				4D4347EB23099A6A00D05AF8 /* Settings */,
 				4D4347EC23099A9700D05AF8 /* Utils */,
+				4D48081A230B4E3C004E873F /* LoginViewController.swift */,
 			);
 			path = Dekkeni;
 			sourceTree = "<group>";
@@ -570,6 +573,7 @@
 				4D3A72242304DB49004F9ED0 /* FAPanel+Animations.swift in Sources */,
 				4D64981822B78438007023CD /* AppDelegate.swift in Sources */,
 				4D3A720623036C41004F9ED0 /* DetailsViewController.swift in Sources */,
+				4D48081B230B4E3C004E873F /* LoginViewController.swift in Sources */,
 				4D3A72232304DB49004F9ED0 /* FAPanel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
