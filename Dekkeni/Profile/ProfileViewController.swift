@@ -15,7 +15,6 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var emailValueLabel: UILabel!
     @IBOutlet weak var addressValueLabel: UILabel!
     @IBOutlet weak var telephoneValueLabel: UILabel!
-    @IBOutlet weak var signoutBtn: UIButton!
     @IBOutlet weak var backView: UIView!
     
     
@@ -34,11 +33,6 @@ class ProfileViewController: UIViewController {
         
         self.profilePhoto.image = UIImage(named: "avatar")
         self.profilePhoto.layer.cornerRadius = self.profilePhoto.frame.height/2.3
-       self.signoutBtn.backgroundColor = .red
-        self.signoutBtn.layer.cornerRadius = self.signoutBtn.frame.height*0.2
-        self.signoutBtn.setTitle("Sign Out", for: .normal)
-        self.signoutBtn.setTitleColor(.white, for: .normal)
-        
     }
     
     @IBAction func menuBtnPressed(_ sender: Any) {
@@ -47,9 +41,6 @@ class ProfileViewController: UIViewController {
     
     
     
-    @IBAction func signOutPressed(_ sender: Any) {
-        
-    }
     /*
     // MARK: - Navigation
 

@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yLW-Bt-m99">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Log In-->
+        <scene sceneID="3dh-fj-ymT">
+            <objects>
+                <viewController storyboardIdentifier="LoginVC" title="Log In" useStoryboardIdentifierAsRestorationIdentifier="YES" id="k4n-st-b6M" customClass="LoginViewController" customModule="Dekkeni" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hem-61-jTB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U4p-HP-VVk">
+                                <rect key="frame" x="41.5" y="261" width="331" height="37"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="DEKKENI">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="33" name="Arial-BoldMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YXr-42-GUc">
+                                <rect key="frame" x="41.5" y="315.5" width="331" height="224"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="tMG-DA-liX">
+                                        <rect key="frame" x="33" y="22.5" width="265" height="179"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="f4B-Qw-m9L">
+                                                <rect key="frame" x="0.0" y="0.0" width="265" height="81.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wM-2i-s7a">
+                                                        <rect key="frame" x="0.0" y="0.0" width="53" height="19"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="EMAIL">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.65526628494262695" green="0.15732139348983765" blue="0.089076094329357147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="17" name="Arial-BoldMT"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="johndoe@example.com" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zOL-9v-nsw" customClass="DekkeniTextField" customModule="Dekkeni" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="27" width="246" height="54.5"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="textColor" red="0.65526628490000005" green="0.15732139349999999" blue="0.089076094329999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="john@example.com"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="zOL-9v-nsw" firstAttribute="width" secondItem="f4B-Qw-m9L" secondAttribute="width" multiplier="0.8" constant="34.199999999999989" id="bQN-dI-fhx"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Bey-Y9-K8k">
+                                                <rect key="frame" x="0.0" y="97.5" width="265" height="81.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Po-Uh-pVE">
+                                                        <rect key="frame" x="0.0" y="0.0" width="99" height="19"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="PASSWORD">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.65526628494262695" green="0.15732139348983765" blue="0.089076094329357147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="17" name="Arial-BoldMT"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="*********" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gLT-12-1RN" customClass="DekkeniTextField" customModule="Dekkeni" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="27" width="246" height="54.5"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="textColor" red="0.65526628490000005" green="0.15732139349999999" blue="0.089076094329999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="join" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSecure" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="••••••••••"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="gLT-12-1RN" firstAttribute="width" secondItem="Bey-Y9-K8k" secondAttribute="width" multiplier="0.8" constant="34.199999999999989" id="KT3-5q-LTb"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="tMG-DA-liX" firstAttribute="height" secondItem="YXr-42-GUc" secondAttribute="height" multiplier="0.8" id="8Zc-IG-8KF"/>
+                                    <constraint firstItem="tMG-DA-liX" firstAttribute="centerX" secondItem="YXr-42-GUc" secondAttribute="centerX" id="DLJ-7y-3QV"/>
+                                    <constraint firstItem="tMG-DA-liX" firstAttribute="centerY" secondItem="YXr-42-GUc" secondAttribute="centerY" id="ff7-8m-6r5"/>
+                                    <constraint firstItem="tMG-DA-liX" firstAttribute="width" secondItem="YXr-42-GUc" secondAttribute="width" multiplier="0.8" id="o4Y-3i-Nze"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6xD-H4-GqK" customClass="DekkeniButton" customModule="Dekkeni" customModuleProvider="target">
+                                <rect key="frame" x="83" y="585" width="248" height="41.5"/>
+                                <color key="backgroundColor" red="0.47843137250000001" green="0.80784313730000001" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6xD-H4-GqK" secondAttribute="height" multiplier="6:1" id="nPR-9h-rOG"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="SIGN IN"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fontColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signInBtnPressed:" destination="k4n-st-b6M" eventType="touchUpInside" id="mrf-4h-dvE"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kWz-jJ-8Gd">
+                                <rect key="frame" x="0.0" y="806" width="414" height="32"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJ6-F1-sdJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="203" height="32"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="First Timer?">
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <font key="NSFont" size="17" name="ArialMT"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mva-hU-k80">
+                                        <rect key="frame" x="211" y="0.0" width="203" height="32"/>
+                                        <state key="normal">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Register">
+                                                    <attributes>
+                                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <font key="NSFont" size="18" name="Arial-BoldMT"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </state>
+                                        <connections>
+                                            <action selector="registerButtonPressed:" destination="k4n-st-b6M" eventType="touchUpInside" id="8Fx-ry-Qxj"/>
+                                            <segue destination="Spa-nh-DeU" kind="show" identifier="toRegister" id="uVD-EI-1LE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="CdO-IF-hES">
+                                <rect key="frame" x="157.5" y="113.5" width="99" height="99.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="CdO-IF-hES" secondAttribute="height" multiplier="1:1" id="gAq-Xs-YHQ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOW-kO-2l3">
+                                <rect key="frame" x="83" y="657.5" width="248" height="31"/>
+                                <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                                <state key="normal" title="RESET PASSWORD">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="8Fp-rA-VII" kind="show" id="C4X-Wx-G62"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.75686274509999996" green="0.25882352939999997" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="YXr-42-GUc" firstAttribute="height" secondItem="hem-61-jTB" secondAttribute="height" multiplier="0.25" id="2CV-PK-XQP"/>
+                            <constraint firstItem="CdO-IF-hES" firstAttribute="centerX" secondItem="U4p-HP-VVk" secondAttribute="centerX" id="2ot-IW-8ds"/>
+                            <constraint firstItem="YXr-42-GUc" firstAttribute="top" secondItem="U4p-HP-VVk" secondAttribute="bottom" constant="17.5" id="4kL-aa-SGR"/>
+                            <constraint firstItem="kWz-jJ-8Gd" firstAttribute="centerX" secondItem="CkT-nT-tpA" secondAttribute="centerX" id="80L-n4-3Tf"/>
+                            <constraint firstItem="oOW-kO-2l3" firstAttribute="width" secondItem="6xD-H4-GqK" secondAttribute="width" id="9v8-uH-dXR"/>
+                            <constraint firstItem="CkT-nT-tpA" firstAttribute="bottom" secondItem="kWz-jJ-8Gd" secondAttribute="bottom" constant="24" id="BeA-XM-jT6"/>
+                            <constraint firstItem="6xD-H4-GqK" firstAttribute="width" secondItem="hem-61-jTB" secondAttribute="width" multiplier="0.6" id="E0N-pE-AgH"/>
+                            <constraint firstItem="U4p-HP-VVk" firstAttribute="top" secondItem="CdO-IF-hES" secondAttribute="bottom" constant="48" id="J6r-eU-PsO"/>
+                            <constraint firstItem="YXr-42-GUc" firstAttribute="centerX" secondItem="CkT-nT-tpA" secondAttribute="centerX" id="P2n-vo-hBj"/>
+                            <constraint firstItem="oOW-kO-2l3" firstAttribute="top" secondItem="6xD-H4-GqK" secondAttribute="bottom" constant="31" id="Qfc-mh-TEN"/>
+                            <constraint firstItem="YXr-42-GUc" firstAttribute="centerY" secondItem="CkT-nT-tpA" secondAttribute="centerY" multiplier="0.9" id="Qu9-jz-s3f"/>
+                            <constraint firstItem="oOW-kO-2l3" firstAttribute="centerX" secondItem="6xD-H4-GqK" secondAttribute="centerX" id="Whu-m8-nOy"/>
+                            <constraint firstItem="YXr-42-GUc" firstAttribute="width" secondItem="hem-61-jTB" secondAttribute="width" multiplier="0.8" id="YPC-YP-KFF"/>
+                            <constraint firstItem="6xD-H4-GqK" firstAttribute="top" secondItem="YXr-42-GUc" secondAttribute="bottom" constant="45.5" id="dUj-cl-tjs"/>
+                            <constraint firstItem="6xD-H4-GqK" firstAttribute="centerX" secondItem="CkT-nT-tpA" secondAttribute="centerX" id="dhU-Nn-BNc"/>
+                            <constraint firstItem="CdO-IF-hES" firstAttribute="width" secondItem="U4p-HP-VVk" secondAttribute="width" multiplier="0.3" id="kT0-lz-I7w"/>
+                            <constraint firstItem="U4p-HP-VVk" firstAttribute="centerX" secondItem="CkT-nT-tpA" secondAttribute="centerX" id="qhc-MA-MUo"/>
+                            <constraint firstItem="U4p-HP-VVk" firstAttribute="width" secondItem="hem-61-jTB" secondAttribute="width" multiplier="0.8" id="sJh-v9-RgE"/>
+                            <constraint firstItem="kWz-jJ-8Gd" firstAttribute="width" secondItem="hem-61-jTB" secondAttribute="width" id="xT9-BX-cPD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CkT-nT-tpA"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="El2-kd-Tiq">
+                        <barButtonItem key="backBarButtonItem" title="Login" id="GBU-yL-5a4"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="zOL-9v-nsw" id="Ejj-rO-RF9"/>
+                        <outlet property="passwordTextField" destination="gLT-12-1RN" id="zs9-1H-toM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="opV-BF-MIa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1881" y="1217"/>
+        </scene>
+        <!--Reset Pass View Controller-->
+        <scene sceneID="He3-Zc-27L">
+            <objects>
+                <viewController id="8Fp-rA-VII" customClass="ResetPassViewController" customModule="Dekkeni" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M4V-GD-r0Z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7M-yU-zWB">
+                                <rect key="frame" x="41.5" y="202" width="331" height="63"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="RESET YOUR PASSWORD">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="28" name="Arial-BoldMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y6Q-r8-Wkj">
+                                <rect key="frame" x="41.5" y="408" width="331" height="134"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZuX-1n-hEm">
+                                        <rect key="frame" x="33" y="13" width="265" height="108"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EMAIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5y-cP-gP7">
+                                                <rect key="frame" x="0.0" y="0.0" width="265" height="19"/>
+                                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
+                                                <color key="textColor" red="0.65526628490000005" green="0.15732139349999999" blue="0.089076094329999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="johndoe@example.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TOL-YU-ZMR" customClass="DekkeniTextField" customModule="Dekkeni" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="27" width="265" height="81"/>
+                                                <color key="textColor" red="0.65526628490000005" green="0.15732139349999999" blue="0.089076094329999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="johndoe@example.com"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="ZuX-1n-hEm" firstAttribute="width" secondItem="Y6Q-r8-Wkj" secondAttribute="width" multiplier="0.8" id="Cb8-Ow-35D"/>
+                                    <constraint firstItem="ZuX-1n-hEm" firstAttribute="height" secondItem="Y6Q-r8-Wkj" secondAttribute="height" multiplier="0.8" id="SGa-fa-nGI"/>
+                                    <constraint firstItem="ZuX-1n-hEm" firstAttribute="centerX" secondItem="Y6Q-r8-Wkj" secondAttribute="centerX" id="vaB-Kv-4vT"/>
+                                    <constraint firstItem="ZuX-1n-hEm" firstAttribute="centerY" secondItem="Y6Q-r8-Wkj" secondAttribute="centerY" id="ws7-kh-64w"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMn-nB-f48" customClass="DekkeniButton" customModule="Dekkeni" customModuleProvider="target">
+                                <rect key="frame" x="41.5" y="627" width="331" height="55.5"/>
+                                <color key="backgroundColor" red="0.47843137250000001" green="0.80784313730000001" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aMn-nB-f48" secondAttribute="height" multiplier="6:1" id="iPa-rw-wO0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fontColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="RESET"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="resetBtnPressed:" destination="8Fp-rA-VII" eventType="touchUpInside" id="Gt6-TC-lTs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.75686274509999996" green="0.25882352939999997" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="g7M-yU-zWB" firstAttribute="top" secondItem="0v0-vl-wlF" secondAttribute="top" constant="114" id="0vI-mU-OLH"/>
+                            <constraint firstItem="g7M-yU-zWB" firstAttribute="centerX" secondItem="0v0-vl-wlF" secondAttribute="centerX" id="H3P-6u-pRw"/>
+                            <constraint firstItem="aMn-nB-f48" firstAttribute="top" secondItem="Y6Q-r8-Wkj" secondAttribute="bottom" constant="85" id="Inr-zb-OoH"/>
+                            <constraint firstItem="Y6Q-r8-Wkj" firstAttribute="centerY" secondItem="0v0-vl-wlF" secondAttribute="centerY" id="Q1i-ld-16q"/>
+                            <constraint firstItem="g7M-yU-zWB" firstAttribute="width" secondItem="M4V-GD-r0Z" secondAttribute="width" multiplier="0.8" id="Xdy-iq-b60"/>
+                            <constraint firstItem="aMn-nB-f48" firstAttribute="width" secondItem="Y6Q-r8-Wkj" secondAttribute="width" id="ey8-OE-YAN"/>
+                            <constraint firstItem="Y6Q-r8-Wkj" firstAttribute="height" secondItem="M4V-GD-r0Z" secondAttribute="height" multiplier="0.15" id="f08-Hs-t4M"/>
+                            <constraint firstItem="aMn-nB-f48" firstAttribute="centerX" secondItem="Y6Q-r8-Wkj" secondAttribute="centerX" id="lj4-9C-QST"/>
+                            <constraint firstItem="Y6Q-r8-Wkj" firstAttribute="width" secondItem="M4V-GD-r0Z" secondAttribute="width" multiplier="0.8" id="q6m-Sn-f39"/>
+                            <constraint firstItem="Y6Q-r8-Wkj" firstAttribute="centerX" secondItem="0v0-vl-wlF" secondAttribute="centerX" id="yCV-0t-vh0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0v0-vl-wlF"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="TOL-YU-ZMR" id="vY6-Vy-mKC"/>
+                        <outlet property="resetBtn" destination="aMn-nB-f48" id="1Yh-Ok-b3r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ov-ih-kdv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2651" y="1572"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="Zd6-cz-H3a">
+            <objects>
+                <viewController id="Spa-nh-DeU" customClass="SignUpViewController" customModule="Dekkeni" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nEj-Jb-k2Z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ANV-HV-UUX">
+                                <rect key="frame" x="41.5" y="296" width="331" height="358"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="7Yn-Qj-v7j">
+                                        <rect key="frame" x="33" y="35.5" width="265" height="287"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="obY-lg-8hj">
+                                                <rect key="frame" x="0.0" y="0.0" width="265" height="60"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Amk-Zz-VQt">
+                                                        <rect key="frame" x="0.0" y="0.0" width="265" height="19"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="NAME">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.65526628490000005" green="0.15732139349999999" blue="0.089076094329999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="17" name="Arial-BoldMT"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="John" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TfG-uX-b5d" customClass="DekkeniTextField" customModule="Dekkeni" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="27" width="265" height="33"/>
+                                                        <color key="textColor" red="0.65526628490000005" green="0.15732139349999999" blue="0.089076094329999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="John Doe"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fOu-pW-7sr">
+                                                <rect key="frame" x="0.0" y="76" width="265" height="59.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4h-5x-TWM">
+                                                        <rect key="frame" x="0.0" y="0.0" width="265" height="19"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="EMAIL">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.65526628490000005" green="0.15732139349999999" blue="0.089076094329999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="17" name="Arial-BoldMT"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="johndoe@example.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0oO-mt-Gp4" customClass="DekkeniTextField" customModule="Dekkeni" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="27" width="265" height="32.5"/>
+                                                        <color key="textColor" red="0.65526628490000005" green="0.15732139349999999" blue="0.089076094329999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="johndoe@example.com"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="76x-Wk-6RU">
+                                                <rect key="frame" x="0.0" y="151.5" width="265" height="59.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xv6-yp-ddg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="265" height="19"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="PASSWORD">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.65526628490000005" green="0.15732139349999999" blue="0.089076094329999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="17" name="Arial-BoldMT"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="*********" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iur-rs-vc2" customClass="DekkeniTextField" customModule="Dekkeni" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="27" width="265" height="32.5"/>
+                                                        <color key="textColor" red="0.65526628490000005" green="0.15732139349999999" blue="0.089076094329999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="••••••••••"/>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSecure" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cSh-TA-qTI">
+                                                <rect key="frame" x="0.0" y="227" width="265" height="60"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xf3-bX-H1Y">
+                                                        <rect key="frame" x="0.0" y="0.0" width="265" height="19"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="CONFIRM">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.65526628490000005" green="0.15732139349999999" blue="0.089076094329999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="17" name="Arial-BoldMT"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="*********" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n4t-I9-BzR" customClass="DekkeniTextField" customModule="Dekkeni" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="27" width="265" height="33"/>
+                                                        <color key="textColor" red="0.65526628490000005" green="0.15732139349999999" blue="0.089076094329999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="••••••••••"/>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSecure" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="cSh-TA-qTI" firstAttribute="width" secondItem="76x-Wk-6RU" secondAttribute="width" id="Bm4-Ce-qwD"/>
+                                            <constraint firstItem="fOu-pW-7sr" firstAttribute="width" secondItem="obY-lg-8hj" secondAttribute="width" id="NBk-sN-Sgv"/>
+                                            <constraint firstItem="76x-Wk-6RU" firstAttribute="width" secondItem="fOu-pW-7sr" secondAttribute="width" id="OyL-yp-GiM"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="7Yn-Qj-v7j" firstAttribute="centerX" secondItem="ANV-HV-UUX" secondAttribute="centerX" id="3G3-ba-a8y"/>
+                                    <constraint firstItem="7Yn-Qj-v7j" firstAttribute="height" secondItem="ANV-HV-UUX" secondAttribute="height" multiplier="0.8" id="Fih-RC-Pbc"/>
+                                    <constraint firstItem="7Yn-Qj-v7j" firstAttribute="centerY" secondItem="ANV-HV-UUX" secondAttribute="centerY" id="J2b-ec-ZxO"/>
+                                    <constraint firstItem="7Yn-Qj-v7j" firstAttribute="width" secondItem="ANV-HV-UUX" secondAttribute="width" multiplier="0.8" id="NlS-GP-p3f"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1vX-Kd-FaR" customClass="DekkeniButton" customModule="Dekkeni" customModuleProvider="target">
+                                <rect key="frame" x="41.5" y="727.5" width="331" height="55.5"/>
+                                <color key="backgroundColor" red="0.47843137250000001" green="0.80784313730000001" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1vX-Kd-FaR" secondAttribute="height" multiplier="6:1" id="bin-GR-5oG"/>
+                                </constraints>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="REGISTER">
+                                            <attributes>
+                                                <font key="NSFont" size="16" name="Arial-BoldMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="registerBtnPressed:" destination="Spa-nh-DeU" eventType="touchUpInside" id="U4c-B7-zmH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5jW-Jd-eJI">
+                                <rect key="frame" x="59.5" y="183" width="295.5" height="31.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="BECOME A REGULAR">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="28" name="Arial-BoldMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.75686274509999996" green="0.25882352939999997" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1vX-Kd-FaR" firstAttribute="centerX" secondItem="Bbh-3O-k2B" secondAttribute="centerX" id="62Y-2d-QwZ"/>
+                            <constraint firstItem="5jW-Jd-eJI" firstAttribute="centerX" secondItem="Bbh-3O-k2B" secondAttribute="centerX" id="9cL-3Z-3Ns"/>
+                            <constraint firstItem="1vX-Kd-FaR" firstAttribute="top" secondItem="ANV-HV-UUX" secondAttribute="bottom" constant="73.5" id="b9a-SQ-Zpy"/>
+                            <constraint firstItem="ANV-HV-UUX" firstAttribute="top" secondItem="5jW-Jd-eJI" secondAttribute="bottom" constant="81.5" id="gfM-KA-RZk"/>
+                            <constraint firstItem="ANV-HV-UUX" firstAttribute="height" secondItem="nEj-Jb-k2Z" secondAttribute="height" multiplier="0.4" id="o7K-Vb-arG"/>
+                            <constraint firstItem="1vX-Kd-FaR" firstAttribute="width" secondItem="ANV-HV-UUX" secondAttribute="width" id="ogV-ZL-tk2"/>
+                            <constraint firstItem="ANV-HV-UUX" firstAttribute="width" secondItem="nEj-Jb-k2Z" secondAttribute="width" multiplier="0.8" id="pjA-5u-qDZ"/>
+                            <constraint firstItem="ANV-HV-UUX" firstAttribute="centerY" secondItem="Bbh-3O-k2B" secondAttribute="centerY" id="rk3-LE-KoT"/>
+                            <constraint firstItem="ANV-HV-UUX" firstAttribute="centerX" secondItem="Bbh-3O-k2B" secondAttribute="centerX" id="uY2-C1-slT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Bbh-3O-k2B"/>
+                    </view>
+                    <connections>
+                        <outlet property="confirmTextField" destination="n4t-I9-BzR" id="luk-G6-Z8S"/>
+                        <outlet property="emailTextField" destination="0oO-mt-Gp4" id="1qf-lW-Tp6"/>
+                        <outlet property="nameTextField" destination="TfG-uX-b5d" id="EuB-9H-mRh"/>
+                        <outlet property="passwordTextField" destination="Iur-rs-vc2" id="9wc-dm-tbS"/>
+                        <outlet property="registerBtn" destination="1vX-Kd-FaR" id="NQQ-zX-umX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k6c-Ka-w5k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2651" y="901"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Pk6-HJ-208">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yLW-Bt-m99" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pNp-2a-n2L">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.75686274509999996" green="0.25882352939999997" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="k4n-st-b6M" kind="relationship" relationship="rootViewController" id="zjQ-7x-xvZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q1p-Cs-sA6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1078" y="1217"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="29" height="29"/>
+    </resources>
+</document>

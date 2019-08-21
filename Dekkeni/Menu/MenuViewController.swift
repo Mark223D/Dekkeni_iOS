@@ -103,11 +103,11 @@ extension MenuViewController: UICollectionViewDataSource{
     
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
 
         if indexPath.row == 0 {
-        
-            let profileVC: ProfileViewController = mainStoryboard.instantiateViewController(withIdentifier: "ProfileVC") as! ProfileViewController
+            let profileStoryboard: UIStoryboard = UIStoryboard(name: "Profile", bundle: nil)
+
+            let profileVC: ProfileViewController = profileStoryboard.instantiateViewController(withIdentifier: "ProfileVC") as! ProfileViewController
            
             let centerNavVC = UINavigationController(rootViewController: profileVC)
             
@@ -117,14 +117,20 @@ extension MenuViewController: UICollectionViewDataSource{
 
             
         }
-        if indexPath.row == 1 {
-            let storeVC: StoreViewController = mainStoryboard.instantiateViewController(withIdentifier: "StoreVC") as! StoreViewController
+        else if indexPath.row == 1 {
+            
+            let storeStoryboard: UIStoryboard = UIStoryboard(name: "Store", bundle: nil)
+
+            let storeVC: StoreViewController = storeStoryboard.instantiateViewController(withIdentifier: "StoreVC") as! StoreViewController
             let navVC = UINavigationController(rootViewController: storeVC)
             
             _ =  panel!.center(navVC)
         }
-        if indexPath.row == 2{
-            let settingsVC: SettingsViewController = mainStoryboard.instantiateViewController(withIdentifier: "SettingsVC") as! SettingsViewController
+        else if indexPath.row == 2{
+            
+            let settingsStoryboard: UIStoryboard = UIStoryboard(name: "Settings", bundle: nil)
+
+            let settingsVC: SettingsViewController = settingsStoryboard.instantiateViewController(withIdentifier: "SettingsVC") as! SettingsViewController
             
                         let centerNavVC = UINavigationController(rootViewController: settingsVC)
 
@@ -132,10 +138,11 @@ extension MenuViewController: UICollectionViewDataSource{
             _ = panel!.center(centerNavVC)
 
         }
-        if indexPath.row == 3{
-            let settingsVC: LoginViewController = mainStoryboard.instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
+        else if indexPath.row == 3{
+            let accountStoryboard: UIStoryboard = UIStoryboard(name: "Accounts", bundle: nil)
+            let accountVC: LoginViewController = accountStoryboard.instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
             
-            let centerNavVC = UINavigationController(rootViewController: settingsVC)
+            let centerNavVC = UINavigationController(rootViewController: accountVC)
             
             
             _ = panel!.center(centerNavVC)

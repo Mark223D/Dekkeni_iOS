@@ -27,6 +27,15 @@
 		4D42409B2308ADC700052AC4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D42409A2308ADC700052AC4 /* SettingsViewController.swift */; };
 		4D4347E9230995BF00D05AF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D4347E8230995BE00D05AF8 /* Assets.xcassets */; };
 		4D48081B230B4E3C004E873F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D48081A230B4E3C004E873F /* LoginViewController.swift */; };
+		4D497A08230DFC5D00067936 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D497A07230DFC5D00067936 /* SignUpViewController.swift */; };
+		4D497A0C230DFC9000067936 /* ResetPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D497A0B230DFC9000067936 /* ResetPassViewController.swift */; };
+		4D497A0F230DFEF800067936 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D497A0E230DFEF800067936 /* ViewController.swift */; };
+		4D497A11230E008300067936 /* Accounts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D497A10230E008300067936 /* Accounts.storyboard */; };
+		4D497A13230E00BD00067936 /* Store.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D497A12230E00BD00067936 /* Store.storyboard */; };
+		4D497A15230E00D500067936 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D497A14230E00D500067936 /* Profile.storyboard */; };
+		4D497A17230E03D500067936 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D497A16230E03D500067936 /* Settings.storyboard */; };
+		4D497A19230E075100067936 /* DekkeniTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D497A18230E075100067936 /* DekkeniTextField.swift */; };
+		4D497A1B230E091200067936 /* DekkeniButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D497A1A230E091200067936 /* DekkeniButton.swift */; };
 		4D64981822B78438007023CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D64981722B78438007023CD /* AppDelegate.swift */; };
 		4D64981F22B78438007023CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D64981D22B78438007023CD /* Main.storyboard */; };
 		4D64982F22B7843A007023CD /* DekkeniTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D64982E22B7843A007023CD /* DekkeniTests.swift */; };
@@ -87,6 +96,15 @@
 		4D42409A2308ADC700052AC4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		4D4347E8230995BE00D05AF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D48081A230B4E3C004E873F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4D497A07230DFC5D00067936 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		4D497A0B230DFC9000067936 /* ResetPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassViewController.swift; sourceTree = "<group>"; };
+		4D497A0E230DFEF800067936 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4D497A10230E008300067936 /* Accounts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Accounts.storyboard; sourceTree = "<group>"; };
+		4D497A12230E00BD00067936 /* Store.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Store.storyboard; sourceTree = "<group>"; };
+		4D497A14230E00D500067936 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		4D497A16230E03D500067936 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		4D497A18230E075100067936 /* DekkeniTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DekkeniTextField.swift; sourceTree = "<group>"; };
+		4D497A1A230E091200067936 /* DekkeniButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DekkeniButton.swift; sourceTree = "<group>"; };
 		4D64981422B78438007023CD /* Dekkeni.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dekkeni.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D64981722B78438007023CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D64981E22B78438007023CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -148,6 +166,7 @@
 		4D3A721C2304D7E9004F9ED0 /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				4D497A12230E00BD00067936 /* Store.storyboard */,
 				4DAC63182300B77A006D9C57 /* StoreViewController.swift */,
 				4D3A720523036C41004F9ED0 /* DetailsViewController.swift */,
 				4D3A721D2304D7F6004F9ED0 /* StoreItem */,
@@ -204,6 +223,7 @@
 		4D4347EA23099A6100D05AF8 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				4D497A14230E00D500067936 /* Profile.storyboard */,
 				4D4240982308AD8900052AC4 /* ProfileViewController.swift */,
 			);
 			path = Profile;
@@ -212,6 +232,7 @@
 		4D4347EB23099A6A00D05AF8 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				4D497A16230E03D500067936 /* Settings.storyboard */,
 				4D42409A2308ADC700052AC4 /* SettingsViewController.swift */,
 			);
 			path = Settings;
@@ -225,8 +246,20 @@
 				4D6B6D8A22BA741200AE960B /* Helpers.swift */,
 				4DBCC9A522B90FAD00EE16D6 /* StringUtils.swift */,
 				4D3A72072304B50A004F9ED0 /* View+borders.swift */,
+				4D497A0E230DFEF800067936 /* ViewController.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		4D497A0D230DFC9B00067936 /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				4D497A10230E008300067936 /* Accounts.storyboard */,
+				4D48081A230B4E3C004E873F /* LoginViewController.swift */,
+				4D497A07230DFC5D00067936 /* SignUpViewController.swift */,
+				4D497A0B230DFC9000067936 /* ResetPassViewController.swift */,
+			);
+			path = Accounts;
 			sourceTree = "<group>";
 		};
 		4D64980B22B78438007023CD = {
@@ -260,12 +293,14 @@
 				4D6B6DA622BA75F000AE960B /* LaunchScreen.storyboard */,
 				4D64981D22B78438007023CD /* Main.storyboard */,
 				4D64981722B78438007023CD /* AppDelegate.swift */,
+				4D497A0D230DFC9B00067936 /* Accounts */,
 				4D3A721C2304D7E9004F9ED0 /* Store */,
 				4D4347E62309940A00D05AF8 /* Menu */,
 				4D4347EA23099A6100D05AF8 /* Profile */,
 				4D4347EB23099A6A00D05AF8 /* Settings */,
 				4D4347EC23099A9700D05AF8 /* Utils */,
-				4D48081A230B4E3C004E873F /* LoginViewController.swift */,
+				4D497A18230E075100067936 /* DekkeniTextField.swift */,
+				4D497A1A230E091200067936 /* DekkeniButton.swift */,
 			);
 			path = Dekkeni;
 			sourceTree = "<group>";
@@ -432,8 +467,12 @@
 				4DAC63222300CCFE006D9C57 /* StoreTableViewCell.xib in Resources */,
 				4D42409723088A3300052AC4 /* MenuItemCollectionViewCell.xib in Resources */,
 				4D64981F22B78438007023CD /* Main.storyboard in Resources */,
+				4D497A13230E00BD00067936 /* Store.storyboard in Resources */,
 				4D4347E9230995BF00D05AF8 /* Assets.xcassets in Resources */,
+				4D497A15230E00D500067936 /* Profile.storyboard in Resources */,
+				4D497A11230E008300067936 /* Accounts.storyboard in Resources */,
 				4D9D87B622B929E8008F91C2 /* Localizable.strings in Resources */,
+				4D497A17230E03D500067936 /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,9 +591,12 @@
 				4DAC631D2300BA34006D9C57 /* WormTabStripButton.swift in Sources */,
 				4D3A72292304DB49004F9ED0 /* FAPanel+InterfaceRotation.swift in Sources */,
 				4D3A72082304B50A004F9ED0 /* View+borders.swift in Sources */,
+				4D497A1B230E091200067936 /* DekkeniButton.swift in Sources */,
 				4D3A72222304DB49004F9ED0 /* UIView+FAPanel.swift in Sources */,
 				4D3A72282304DB49004F9ED0 /* UIViewController+FAPanel.swift in Sources */,
+				4D497A0C230DFC9000067936 /* ResetPassViewController.swift in Sources */,
 				4D3A72272304DB49004F9ED0 /* UIImage+FAPanel.swift in Sources */,
+				4D497A08230DFC5D00067936 /* SignUpViewController.swift in Sources */,
 				4D4240992308AD8900052AC4 /* ProfileViewController.swift in Sources */,
 				4DAC63192300B77A006D9C57 /* StoreViewController.swift in Sources */,
 				4D42409B2308ADC700052AC4 /* SettingsViewController.swift in Sources */,
@@ -562,11 +604,13 @@
 				4D42409623088A3300052AC4 /* MenuItemCollectionViewCell.swift in Sources */,
 				4D6B6D9B22BA741200AE960B /* Helpers.swift in Sources */,
 				4DAC63202300CCEB006D9C57 /* StoreItemCell.swift in Sources */,
+				4D497A19230E075100067936 /* DekkeniTextField.swift in Sources */,
 				4D6B6D8422BA3B1400AE960B /* Colors.swift in Sources */,
 				4D3A72262304DB49004F9ED0 /* FAPanel+KVO.swift in Sources */,
 				4D3A72212304DB49004F9ED0 /* Collection+FAPanel.swift in Sources */,
 				4D3A72202304DB49004F9ED0 /* FAPanel+Gestures.swift in Sources */,
 				4D3A721F2304D8D2004F9ED0 /* MenuViewController.swift in Sources */,
+				4D497A0F230DFEF800067936 /* ViewController.swift in Sources */,
 				4DAC631B2300BA2D006D9C57 /* WormTabStrip.swift in Sources */,
 				4D3A72252304DB49004F9ED0 /* FAPanelConfigurations.swift in Sources */,
 				4DBCC9A622B90FAD00EE16D6 /* StringUtils.swift in Sources */,

@@ -13,13 +13,16 @@ class StoreViewController: UIViewController {
     let screenSize: CGRect = UIScreen.main.bounds
 
     var showingSearch: Bool = false
-    lazy var searchBar: UISearchBar = {
-        let searchBar = UISearchBar()
-        searchBar.sizeToFit()
-    self.navigationController?.navigationBar.topItem?.titleView = searchBar
-        searchBar.placeholder = "Search..."
-        return searchBar
-    }()
+
+
+    
+    @IBOutlet weak var topViewHeightConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var searchStackView: UIStackView!
+    
+    var topViewOriginalHeight: CGFloat?
+    private var lastContentOffset: CGFloat = 0
+
 
     let titles = [
         "Featured",
@@ -38,7 +41,7 @@ class StoreViewController: UIViewController {
     var lists: [UICollectionView] = []
     
     lazy var viewPager: WormTabStrip = {
-        let frame =  CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
+        let frame =  CGRect(x: 0, y: self.topViewHeightConstraint.constant, width: self.view.frame.size.width, height: self.view.frame.size.height - self.topViewHeightConstraint.constant)
         
         let view = WormTabStrip(frame: frame)
         view.delegate = self
@@ -56,7 +59,6 @@ class StoreViewController: UIViewController {
     }()
     
     
-    @IBOutlet weak var searchBtn: UIBarButtonItem!
     lazy var dataSource : [StoreItemCellContent] = [
         StoreItemCellContent(id: 0, title: "Chips", category: "Fresh", description: "Lays Chips Bag 100g", quantity: 0, price: "1.00"),
         StoreItemCellContent(id: 1,title: "Chocolate",category: "Fresh", description: "Cadbury 10g", quantity: 0, price: "1.50"),
@@ -71,7 +73,10 @@ class StoreViewController: UIViewController {
     var selectedContent:StoreItemCellContent?
     
     
+    @IBOutlet weak var filtersButtons: UIButton!
+    @IBOutlet weak var searchButton: UIButton!
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
     
@@ -89,7 +94,13 @@ class StoreViewController: UIViewController {
         NotificationCenter.default.addObserver(forName: Notification.Name("openDetails"), object: nil, queue: nil, using: detailsClick)
         
         self.title = "Store"
-        
+        self.searchBar.delegate = self
+        self.searchBar.backgroundImage = UIImage()
+        self.searchBar.showsCancelButton = true
+        self.searchBar.setShowsCancelButton(true, animated: true)
+        self.topViewOriginalHeight = self.topViewHeightConstraint.constant
+
+        self.hideKeyboardWhenTappedAround()
     }
     
     @IBAction func menuBtnPressed(_ sender: Any) {
@@ -105,24 +116,26 @@ class StoreViewController: UIViewController {
         }
     }
     
-    @IBAction func searchPressed(_ sender: Any) {
-
+    
+    @IBAction func searchButtonPressed(_ sender: Any) {
         searchToggle(self)
     }
-    
     
     @objc func searchToggle(_ sender: Any){
         if !showingSearch{
             self.searchBar.isHidden = false
+            self.searchButton.isHidden = true
+            self.searchStackView.distribution = .fill
+
             showingSearch = true
             
         }else{
             self.searchBar.isHidden = true
+            self.searchStackView.distribution = .fillEqually
+            self.searchButton.isHidden = false
+            self.searchBar.resignFirstResponder()
             showingSearch = false
-            self.title = "Store"
         }
-        let newButton = UIBarButtonItem(barButtonSystemItem: (self.showingSearch) ? .done : .search, target: self, action:#selector(searchToggle(_:)))
-        self.navigationItem.setRightBarButton(newButton, animated: true)
     }
     func detailsClick(notification:Notification) -> Void {
         guard let contentID = notification.userInfo!["id"] as? Int else { return }
@@ -227,6 +240,29 @@ extension StoreViewController: UICollectionViewDataSource {
 }
 extension StoreViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if (self.lastContentOffset > scrollView.contentOffset.y) {
+            // move up
+            if scrollView.isAtTop{
+                    self.topViewHeightConstraint.constant = self.topViewOriginalHeight!
+                self.viewPager.frame = CGRect(x: self.viewPager.frame.origin.x, y: self.topViewOriginalHeight!, width: self.viewPager.frame.width, height: self.viewPager.frame.height)
+                
+            }
+            
+            
+        }
+        else if (self.lastContentOffset < scrollView.contentOffset.y) {
+            // move down
+            if !scrollView.isDecelerating{
+            
+            self.topViewHeightConstraint.constant = 0
+            self.viewPager.frame = CGRect(x: self.viewPager.frame.origin.x, y: 0, width: self.viewPager.frame.width, height: self.viewPager.frame.height)
+            }
+        }
+        
+        // update the new position acquired
+        self.lastContentOffset = scrollView.contentOffset.y
+    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets
     {
@@ -256,4 +292,40 @@ extension UIApplication {
         
         return icon
     }
+}
+
+extension StoreViewController: UISearchBarDelegate{
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        self.searchToggle(self)
+    }
+    
+}
+
+extension UIScrollView {
+    
+    var isAtTop: Bool {
+        return contentOffset.y <= verticalOffsetForTop
+    }
+    
+    var isAtBottom: Bool {
+        return contentOffset.y >= verticalOffsetForBottom
+    }
+    
+    var verticalOffsetForTop: CGFloat {
+        let topInset = contentInset.top
+        return -topInset
+    }
+    
+    var verticalOffsetForBottom: CGFloat {
+        let scrollViewHeight = bounds.height
+        let scrollContentSizeHeight = contentSize.height
+        let bottomInset = contentInset.bottom
+        let scrollViewBottomOffset = scrollContentSizeHeight + bottomInset - scrollViewHeight
+        return scrollViewBottomOffset
+    }
+    
 }

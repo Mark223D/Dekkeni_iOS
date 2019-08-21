@@ -17,9 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let storeStoryboard: UIStoryboard = UIStoryboard(name: "Store", bundle: nil)
+
         let leftMenuVC: MenuViewController = mainStoryboard.instantiateViewController(withIdentifier: "MenuVC") as! MenuViewController
   
-        let centerVC: StoreViewController = mainStoryboard.instantiateViewController(withIdentifier: "StoreVC") as! StoreViewController
+        let centerVC: StoreViewController = storeStoryboard.instantiateViewController(withIdentifier: "StoreVC") as! StoreViewController
         
         let navVC = UINavigationController(rootViewController: centerVC)
         
