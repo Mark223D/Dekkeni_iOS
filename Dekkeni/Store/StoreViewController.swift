@@ -14,7 +14,8 @@ class StoreViewController: UIViewController {
 
     var showingSearch: Bool = false
 
-
+    @IBOutlet weak var addressBtn: UIButton!
+    
     
     @IBOutlet weak var topViewHeightConstraint: NSLayoutConstraint!
     
@@ -25,6 +26,7 @@ class StoreViewController: UIViewController {
 
 
     let titles = [
+        "Categories",
         "Featured",
         "Best Seller",
         "New Arrivals",
@@ -39,7 +41,6 @@ class StoreViewController: UIViewController {
     ]
     
     var lists: [UICollectionView] = []
-    
     lazy var viewPager: WormTabStrip = {
         let frame =  CGRect(x: 0, y: self.topViewHeightConstraint.constant, width: self.view.frame.size.width, height: self.view.frame.size.height - self.topViewHeightConstraint.constant)
         
@@ -100,6 +101,9 @@ class StoreViewController: UIViewController {
         self.searchBar.setShowsCancelButton(true, animated: true)
         self.topViewOriginalHeight = self.topViewHeightConstraint.constant
 
+        self.searchButton.layer.addShadow()
+        self.filtersButtons.layer.addShadow()
+        
         self.hideKeyboardWhenTappedAround()
     }
     
@@ -109,14 +113,26 @@ class StoreViewController: UIViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if self.viewPager.currentTabIndex != 0{
+            
+        
         if segue.identifier == "toDetailsPage"{
             let object = self.selectedContent
             let controller = segue.destination as! DetailsViewController
             controller.content = object
         }
+        }
+        else{
+            //Category Selected
+//            self.viewPager.selectTabAt(index: <#T##Int#>)
+        }
     }
     
     
+    
+    @IBAction func addressBtnPressed(_ sender: Any) {
+        
+    }
     @IBAction func searchButtonPressed(_ sender: Any) {
         searchToggle(self)
     }
@@ -126,7 +142,8 @@ class StoreViewController: UIViewController {
             self.searchBar.isHidden = false
             self.searchButton.isHidden = true
             self.searchStackView.distribution = .fill
-
+            self.addressBtn.isHidden = true
+            self.filtersButtons.isHidden = true
             showingSearch = true
             
         }else{
@@ -134,6 +151,10 @@ class StoreViewController: UIViewController {
             self.searchStackView.distribution = .fillEqually
             self.searchButton.isHidden = false
             self.searchBar.resignFirstResponder()
+            self.addressBtn.isHidden = false
+            self.filtersButtons.isHidden = false
+
+
             showingSearch = false
         }
     }
@@ -188,12 +209,25 @@ extension StoreViewController: WormTabStripDelegate{
         let tabPageX = self.view.frame.origin.x
         let tabPageY = self.view.frame.origin.y
         let tabPageW = self.view.frame.width
-        let tabPageH = self.view.frame.height
+        let tabPageH = self.view.frame.height-50
 
         let view = UIView(frame: CGRect(x: tabPageX, y: tabPageY , width: tabPageW, height: tabPageH))
+//        if index == 0{
+//            let tableView = UITableView(frame: CGRect(x: self.view.frame.origin.x, y: self.view.frame.origin.y, width: self.view.frame.width, height: view.frame.height ))
+//            tableView.backgroundColor = UIColor(displayP3Red: 193/255, green: 66/255, blue: 40/255, alpha: 0.05)
+//            tableView.allowsSelection = true
+//            tableView.delegate = self
+//            tableView.dataSource = self
+//            tableView.separatorStyle = .none
+//            tableView.register(UINib(nibName: "CategoryTableViewCell", bundle: nil), forCellReuseIdentifier: "categoryCell")
+//            view.addSubview(tableView)
+//        }
+//        else{
 
         let flowLayout = UICollectionViewFlowLayout.init()
+        
         let collectionView = UICollectionView(frame: CGRect(x: self.view.frame.origin.x, y: self.view.frame.origin.y, width: self.view.frame.width, height: view.frame.height ), collectionViewLayout: flowLayout)
+        collectionView.tag = index
         collectionView.backgroundColor = UIColor(displayP3Red: 193/255, green: 66/255, blue: 40/255, alpha: 0.05)
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -203,6 +237,8 @@ extension StoreViewController: WormTabStripDelegate{
         
         view.addSubview(collectionView)
         self.lists.append(collectionView)
+//        }
+    
         
         return view
     }
@@ -212,6 +248,7 @@ extension StoreViewController: WormTabStripDelegate{
     }
     
     func WTSReachedLeftEdge(panParam: UIPanGestureRecognizer) {
+        panel?.openLeft(animated: true)
     }
     
     func WTSReachedRightEdge(panParam: UIPanGestureRecognizer) {
@@ -220,18 +257,41 @@ extension StoreViewController: WormTabStripDelegate{
 
 extension StoreViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if collectionView.tag == 0{
+            return titles.count
+        }
         return dataSource.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StoreItem", for: indexPath) as! StoreItemCell
-        cell.setContent(content: dataSource[indexPath.row])
+        if collectionView.tag == 0 {
+            let newIndex = indexPath.row + 1
+            if newIndex < titles.count{
+                cell.quantifierStackView.isHidden = true
+                cell.priceLabel.isHidden = true
+                cell.titleLabel.text = titles[indexPath.row+1]
+                cell.productImageView.backgroundColor = .red
+                cell.imageButton.isUserInteractionEnabled = false
+            }
+            else{
+                cell.isHidden = true
+            }
+            
+        }
+        else{
+            cell.setContent(content: dataSource[indexPath.row])
+            
+        }
         cell.layer.borderColor = UIColor(displayP3Red: 193/255, green: 66/255, blue: 40/255, alpha: 0.1).cgColor
         cell.layer.borderWidth = 1
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("test")
+        print("CollectionView: DidSelectItemAt")
+        self.viewPager.selectTabAt(index: indexPath.row+1)
+
+        
     }
     
     
@@ -273,12 +333,37 @@ extension StoreViewController: UICollectionViewDelegate, UICollectionViewDelegat
         let leftAndRightPaddings: CGFloat = 30
                 let numberOfItemsPerRow: CGFloat = 2.0
                 let width = (screenSize.width-leftAndRightPaddings)/numberOfItemsPerRow
+        if collectionView.tag == 0{
+            return CGSize(width: width, height: width)
+
+        }
                 return CGSize(width: width, height: width*1.4)
     }
     
    
 }
 
+
+extension StoreViewController: UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return titles.count - 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "categoryCell", for: indexPath) as! CategoryTableViewCell
+        cell.categoryTitle.text = titles[indexPath.row+1]
+        return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        self.viewPager.selectTabAt(index: indexPath.row+1)
+    }
+    
+    
+}
+extension StoreViewController:UITableViewDelegate{
+    
+}
 extension UIApplication {
     var icon: UIImage? {
         guard let iconsDictionary = Bundle.main.infoDictionary?["CFBundleIcons"] as? NSDictionary,
@@ -301,31 +386,6 @@ extension StoreViewController: UISearchBarDelegate{
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         self.searchToggle(self)
-    }
-    
-}
-
-extension UIScrollView {
-    
-    var isAtTop: Bool {
-        return contentOffset.y <= verticalOffsetForTop
-    }
-    
-    var isAtBottom: Bool {
-        return contentOffset.y >= verticalOffsetForBottom
-    }
-    
-    var verticalOffsetForTop: CGFloat {
-        let topInset = contentInset.top
-        return -topInset
-    }
-    
-    var verticalOffsetForBottom: CGFloat {
-        let scrollViewHeight = bounds.height
-        let scrollContentSizeHeight = contentSize.height
-        let bottomInset = contentInset.bottom
-        let scrollViewBottomOffset = scrollContentSizeHeight + bottomInset - scrollViewHeight
-        return scrollViewBottomOffset
     }
     
 }

@@ -39,6 +39,7 @@ rootVC.configs.panFromEdge = false
         
         UINavigationBar.appearance().barStyle = .blackOpaque
         UINavigationBar.appearance().tintColor = .white//UIColor(hue: 10, saturation: 90, brightness: 76, alpha: 1)
+        
         UINavigationBar.appearance().shadowImage = UIImage()
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
 

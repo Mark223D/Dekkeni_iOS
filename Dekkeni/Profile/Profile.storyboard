@@ -19,146 +19,94 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jTr-kh-hZd">
-                                <rect key="frame" x="165.5" y="70" width="83" height="83"/>
+                                <rect key="frame" x="165.5" y="50.5" width="83" height="82.5"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="jTr-kh-hZd" secondAttribute="height" multiplier="1:1" id="sPb-T0-Wvv"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="de7-tu-xAv">
+                                <rect key="frame" x="174.5" y="149" width="65.5" height="33"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7OD-Xw-b1y">
-                                <rect key="frame" x="41.5" y="233" width="331" height="404"/>
+                                <rect key="frame" x="41.5" y="237" width="331" height="323.5"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="q5B-91-xnP">
-                                        <rect key="frame" x="33" y="40.5" width="265" height="323"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="q5B-91-xnP">
+                                        <rect key="frame" x="20" y="32.5" width="291" height="258.5"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xLb-ov-IF5">
-                                                <rect key="frame" x="0.0" y="0.0" width="265" height="20.5"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mip-QT-YGU">
-                                                        <rect key="frame" x="0.0" y="0.5" width="132.5" height="19"/>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="Name :">
-                                                                <attributes>
-                                                                    <color key="NSColor" red="0.65526628494262695" green="0.15732139348983765" blue="0.089076094329357147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <font key="NSFont" size="17" name="Arial-BoldMT"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="de7-tu-xAv">
-                                                        <rect key="frame" x="132.5" y="0.0" width="132.5" height="20.5"/>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="Label">
-                                                                <attributes>
-                                                                    <color key="NSColor" red="0.65526628494262695" green="0.15732139348983765" blue="0.089076094329357147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <font key="NSFont" metaFont="system" size="17"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="toO-QG-SE8">
-                                                <rect key="frame" x="0.0" y="101" width="265" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="291" height="26"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTj-o9-Rmx">
-                                                        <rect key="frame" x="0.0" y="0.5" width="151.5" height="19"/>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="Email :">
-                                                                <attributes>
-                                                                    <color key="NSColor" red="0.65526628494262695" green="0.15732139348983765" blue="0.089076094329357147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <font key="NSFont" size="17" name="Arial-BoldMT"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTj-o9-Rmx">
+                                                        <rect key="frame" x="0.0" y="3" width="64" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="64" id="abV-dG-bkj"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="17"/>
+                                                        <color key="textColor" red="0.65526628494262695" green="0.15732139348983765" blue="0.089076094329357147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7L0-BT-jRR">
-                                                        <rect key="frame" x="151.5" y="0.0" width="113.5" height="20.5"/>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="Label">
-                                                                <attributes>
-                                                                    <color key="NSColor" red="0.65526628494262695" green="0.15732139348983765" blue="0.089076094329357147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <font key="NSFont" metaFont="system" size="17"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7L0-BT-jRR">
+                                                        <rect key="frame" x="64" y="0.0" width="227" height="26"/>
+                                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="22"/>
+                                                        <color key="textColor" red="0.65526628494262695" green="0.15732139348983765" blue="0.089076094329357147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XCj-1h-g9C">
-                                                <rect key="frame" x="0.0" y="201.5" width="265" height="20.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XCj-1h-g9C">
+                                                <rect key="frame" x="0.0" y="77" width="291" height="26"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihq-O1-pnF">
-                                                        <rect key="frame" x="0.0" y="1" width="132.5" height="19"/>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="Address">
-                                                                <attributes>
-                                                                    <color key="NSColor" red="0.65526628494262695" green="0.15732139348983765" blue="0.089076094329357147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <font key="NSFont" size="17" name="Arial-BoldMT"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ihq-O1-pnF">
+                                                        <rect key="frame" x="0.0" y="3" width="64" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="64" id="29c-Xq-0tR"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="17"/>
+                                                        <color key="textColor" red="0.65526628494262695" green="0.15732139348983765" blue="0.089076094329357147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUB-g8-Gjc">
-                                                        <rect key="frame" x="132.5" y="0.0" width="132.5" height="20.5"/>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="Label">
-                                                                <attributes>
-                                                                    <color key="NSColor" red="0.65526628494262695" green="0.15732139348983765" blue="0.089076094329357147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <font key="NSFont" metaFont="system" size="17"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUB-g8-Gjc">
+                                                        <rect key="frame" x="64" y="0.0" width="227" height="26"/>
+                                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="22"/>
+                                                        <color key="textColor" red="0.65526628494262695" green="0.15732139348983765" blue="0.089076094329357147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xza-bw-vhl">
-                                                <rect key="frame" x="0.0" y="302.5" width="265" height="20.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xza-bw-vhl">
+                                                <rect key="frame" x="0.0" y="153.5" width="291" height="26"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fko-3k-Kjp">
-                                                        <rect key="frame" x="0.0" y="1" width="132.5" height="19"/>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="Telephone :">
-                                                                <attributes>
-                                                                    <color key="NSColor" red="0.65526628494262695" green="0.15732139348983765" blue="0.089076094329357147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <font key="NSFont" size="17" name="Arial-BoldMT"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telephone :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fko-3k-Kjp">
+                                                        <rect key="frame" x="0.0" y="3" width="82" height="20"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="82" id="TIA-It-NZE"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="17"/>
+                                                        <color key="textColor" red="0.65526628494262695" green="0.15732139348983765" blue="0.089076094329357147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJG-rl-j0B">
-                                                        <rect key="frame" x="132.5" y="0.0" width="132.5" height="20.5"/>
-                                                        <attributedString key="attributedText">
-                                                            <fragment content="Label">
-                                                                <attributes>
-                                                                    <color key="NSColor" red="0.65526628494262695" green="0.15732139348983765" blue="0.089076094329357147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <font key="NSFont" metaFont="system" size="17"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                        </attributedString>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJG-rl-j0B">
+                                                        <rect key="frame" x="82" y="0.0" width="209" height="26"/>
+                                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="22"/>
+                                                        <color key="textColor" red="0.65526628494262695" green="0.15732139348983765" blue="0.089076094329357147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                             </stackView>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SJ1-Dr-pk3">
+                                                <rect key="frame" x="0.0" y="230.5" width="291" height="29"/>
+                                                <segments>
+                                                    <segment title="$"/>
+                                                    <segment title="LBP"/>
+                                                </segments>
+                                                <color key="tintColor" red="0.82087332010000003" green="0.2066189349" blue="0.1176441684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </segmentedControl>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="xLb-ov-IF5" firstAttribute="width" secondItem="q5B-91-xnP" secondAttribute="width" id="4pQ-Y9-33H"/>
-                                            <constraint firstItem="toO-QG-SE8" firstAttribute="width" secondItem="xLb-ov-IF5" secondAttribute="width" id="Jzb-X9-JY0"/>
                                             <constraint firstItem="XCj-1h-g9C" firstAttribute="width" secondItem="toO-QG-SE8" secondAttribute="width" id="gke-pz-4t5"/>
                                             <constraint firstItem="xza-bw-vhl" firstAttribute="width" secondItem="XCj-1h-g9C" secondAttribute="width" id="pvD-3h-PMb"/>
                                         </constraints>
@@ -168,7 +116,7 @@
                                 <constraints>
                                     <constraint firstItem="q5B-91-xnP" firstAttribute="height" secondItem="7OD-Xw-b1y" secondAttribute="height" multiplier="0.8" id="388-sG-jdg"/>
                                     <constraint firstItem="q5B-91-xnP" firstAttribute="centerX" secondItem="7OD-Xw-b1y" secondAttribute="centerX" id="cWt-BE-3kd"/>
-                                    <constraint firstItem="q5B-91-xnP" firstAttribute="width" secondItem="7OD-Xw-b1y" secondAttribute="width" multiplier="0.8" id="cxu-MM-Zql"/>
+                                    <constraint firstItem="q5B-91-xnP" firstAttribute="width" secondItem="7OD-Xw-b1y" secondAttribute="width" multiplier="0.88" id="cxu-MM-Zql"/>
                                     <constraint firstItem="q5B-91-xnP" firstAttribute="centerY" secondItem="7OD-Xw-b1y" secondAttribute="centerY" id="rAP-vD-dmM"/>
                                 </constraints>
                             </view>
@@ -176,17 +124,19 @@
                         <color key="backgroundColor" red="0.75686274509999996" green="0.25882352939999997" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="jTr-kh-hZd" firstAttribute="centerX" secondItem="JdW-Xg-cSJ" secondAttribute="centerX" id="2LP-pI-yXs"/>
-                            <constraint firstItem="7OD-Xw-b1y" firstAttribute="top" secondItem="jTr-kh-hZd" secondAttribute="bottom" constant="80" id="AfL-rN-Qee"/>
-                            <constraint firstItem="7OD-Xw-b1y" firstAttribute="height" secondItem="cCn-tF-hkq" secondAttribute="height" multiplier="0.5" id="avE-h6-Yhw"/>
+                            <constraint firstItem="7OD-Xw-b1y" firstAttribute="top" secondItem="jTr-kh-hZd" secondAttribute="bottom" constant="104" id="AfL-rN-Qee"/>
+                            <constraint firstItem="de7-tu-xAv" firstAttribute="centerX" secondItem="jTr-kh-hZd" secondAttribute="centerX" id="JFy-cx-H3y"/>
+                            <constraint firstItem="7OD-Xw-b1y" firstAttribute="height" secondItem="cCn-tF-hkq" secondAttribute="height" multiplier="0.4" id="avE-h6-Yhw"/>
                             <constraint firstItem="7OD-Xw-b1y" firstAttribute="width" secondItem="cCn-tF-hkq" secondAttribute="width" multiplier="0.8" id="i0O-0k-yAb"/>
                             <constraint firstItem="7OD-Xw-b1y" firstAttribute="centerX" secondItem="JdW-Xg-cSJ" secondAttribute="centerX" id="jYo-8e-pPi"/>
-                            <constraint firstItem="7OD-Xw-b1y" firstAttribute="centerY" secondItem="JdW-Xg-cSJ" secondAttribute="centerY" multiplier="1.2" id="mJF-92-7Ux"/>
+                            <constraint firstItem="7OD-Xw-b1y" firstAttribute="centerY" secondItem="JdW-Xg-cSJ" secondAttribute="centerY" multiplier="1.1" id="mJF-92-7Ux"/>
                             <constraint firstItem="jTr-kh-hZd" firstAttribute="width" secondItem="cCn-tF-hkq" secondAttribute="width" multiplier="0.2" id="pXd-s7-p49"/>
+                            <constraint firstItem="de7-tu-xAv" firstAttribute="top" secondItem="jTr-kh-hZd" secondAttribute="bottom" constant="16" id="rcY-IM-e6b"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JdW-Xg-cSJ"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="oCp-9R-le8">
+                    <navigationItem key="navigationItem" title="Profile" id="oCp-9R-le8">
                         <barButtonItem key="backBarButtonItem" title="Profile" id="GkW-oh-LnD"/>
                         <barButtonItem key="leftBarButtonItem" image="menu" id="RWi-w8-yXp">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -215,10 +165,10 @@
             </objects>
             <point key="canvasLocation" x="-6917" y="-481"/>
         </scene>
-        <!--View Controller-->
+        <!--Edit-->
         <scene sceneID="JLE-4P-pIZ">
             <objects>
-                <viewController id="5aW-Im-4hf" sceneMemberID="viewController">
+                <viewController title="Edit" id="5aW-Im-4hf" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JZR-ip-r9d">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -240,6 +190,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.75686274509999996" green="0.25882352939999997" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

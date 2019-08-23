@@ -27,7 +27,7 @@ class MenuViewController: UIViewController {
     let menuContent:[MenuItemCellContent] = [
         MenuItemCellContent(title: "Profile", icon: UIImage(named: "avatar")!),
         MenuItemCellContent(title: "Store", icon: UIImage(named: "store")!),
-        MenuItemCellContent(title: "Log Out", icon: UIImage(named: "exit")!),
+//        MenuItemCellContent(title: "Log Out", icon: UIImage(named: "exit")!),
         MenuItemCellContent(title: "Log In", icon: UIImage(named: "avatar")!)
     ]
     
@@ -91,7 +91,8 @@ extension MenuViewController: UICollectionViewDataSource{
         
         cell.menuItemLabel.text = self.menuContent[indexPath.row].title
         cell.menuItemIcon.image = self.menuContent[indexPath.row].icon
-        
+        cell.menuItemIcon.layer.addShadow()
+
         if indexPath.row == self.menuContent.count - 1{
             cell.separatorView.isHidden = true
         }
@@ -126,19 +127,19 @@ extension MenuViewController: UICollectionViewDataSource{
             
             _ =  panel!.center(navVC)
         }
+//        else if indexPath.row == 2{
+//
+//            let settingsStoryboard: UIStoryboard = UIStoryboard(name: "Settings", bundle: nil)
+//
+//            let settingsVC: SettingsViewController = settingsStoryboard.instantiateViewController(withIdentifier: "SettingsVC") as! SettingsViewController
+//
+//                        let centerNavVC = UINavigationController(rootViewController: settingsVC)
+//
+//
+//            _ = panel!.center(centerNavVC)
+//
+//        }
         else if indexPath.row == 2{
-            
-            let settingsStoryboard: UIStoryboard = UIStoryboard(name: "Settings", bundle: nil)
-
-            let settingsVC: SettingsViewController = settingsStoryboard.instantiateViewController(withIdentifier: "SettingsVC") as! SettingsViewController
-            
-                        let centerNavVC = UINavigationController(rootViewController: settingsVC)
-
-            
-            _ = panel!.center(centerNavVC)
-
-        }
-        else if indexPath.row == 3{
             let accountStoryboard: UIStoryboard = UIStoryboard(name: "Accounts", bundle: nil)
             let accountVC: LoginViewController = accountStoryboard.instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
             

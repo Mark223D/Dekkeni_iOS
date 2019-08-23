@@ -68,4 +68,19 @@ extension UIView {
             layer.shouldRasterize = true
             layer.rasterizationScale = scale ? UIScreen.main.scale : 1
         }
+
+    
+
+}
+
+extension CALayer {
+    func addShadow() {
+        self.shadowOffset = CGSize(width: 0, height: 2)
+        self.shadowOpacity = 0.2
+        self.shadowRadius = 10
+        self.shadowColor = UIColor.black.cgColor
+        self.masksToBounds = false
+    }
+    
+    
 }

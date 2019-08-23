@@ -40,10 +40,12 @@ class DekkeniTextField: UITextField {
         self.attributedPlaceholder = NSAttributedString(string: placeholderText,attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
         
         
-        bottomBar = UIView(frame: CGRect(x: self.frame.origin.x, y: self.frame.height-20, width: self.frame.width, height: 1))
+        bottomBar = UIView(frame: CGRect(x: self.frame.origin.x, y: self.frame.height-20, width: self.frame.width*0.8, height: 2))
         bottomBar?.backgroundColor = UIColor.red
-        self.addSubview(bottomBar!)
+//        self.addSubview(bottomBar!)
+        
     }
+    
     override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         setupView()
@@ -57,3 +59,4 @@ class DekkeniTextField: UITextField {
         layer.add(animation, forKey: "shake")
     }
 }
+

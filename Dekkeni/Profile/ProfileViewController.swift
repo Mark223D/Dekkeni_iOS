@@ -33,6 +33,8 @@ class ProfileViewController: UIViewController {
         
         self.profilePhoto.image = UIImage(named: "avatar")
         self.profilePhoto.layer.cornerRadius = self.profilePhoto.frame.height/2.3
+        self.backView.layer.addShadow()
+        self.profilePhoto.layer.addShadow()
     }
     
     @IBAction func menuBtnPressed(_ sender: Any) {

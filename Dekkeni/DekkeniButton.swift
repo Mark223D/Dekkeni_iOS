@@ -44,7 +44,8 @@ class DekkeniButton: UIButton {
         self.addTarget(self, action: #selector(scaleAnimation), for: .touchUpInside)
         self.addTarget(self, action:#selector(scaleDefault), for: .touchDragExit)
         
-        
+        self.layer.addShadow()
+
     }
     
     override func prepareForInterfaceBuilder() {

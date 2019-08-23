@@ -12,10 +12,12 @@ class ResetPassViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var resetBtn: UIButton!
+    @IBOutlet weak var backView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
+        self.backView.layer.addShadow()
     }
 
 

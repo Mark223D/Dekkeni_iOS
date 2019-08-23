@@ -7,6 +7,7 @@ target 'Dekkeni' do
 
   # Pods for Dekkeni
   pod 'pop'
+pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git', :branch => 'wip/swift4'
 
 
   target 'DekkeniTests' do

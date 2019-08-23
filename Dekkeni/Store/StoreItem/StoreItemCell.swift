@@ -60,6 +60,8 @@ class StoreItemCell: UICollectionViewCell {
         self.plusBtn.layer.borderWidth = 1
         self.plusBtn.layer.borderColor = UIColor.green.cgColor
         
+        self.layer.addShadow()
+        
     }
     
     @IBAction func imagePressed(_ sender: Any) {

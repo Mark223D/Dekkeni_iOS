@@ -12,7 +12,9 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-  
+    @IBOutlet weak var backView: UIView!
+    @IBOutlet weak var dekkeniLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,9 @@ class LoginViewController: UIViewController {
         self.emailTextField.delegate = self
         self.passwordTextField.delegate = self
         self.hideKeyboardWhenTappedAround()
+        self.backView.layer.addShadow()
+        self.dekkeniLabel.layer.addShadow()
+//        self.view.backgroundColor = UIColor.flat
 
     }
     
