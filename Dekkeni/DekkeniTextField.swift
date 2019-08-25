@@ -15,6 +15,7 @@ class DekkeniTextField: UITextField {
     @IBInspectable var insetY: CGFloat = 0
     @IBInspectable var isSecure: Bool = false
     @IBInspectable var placeholderText: String = ""
+
     var bottomBar:UIView?
     
     override func textRect(forBounds bounds: CGRect) -> CGRect {
@@ -30,19 +31,14 @@ class DekkeniTextField: UITextField {
         setupView()
     }
     func setupView(){
-        self.tintColor = UIColor.red
-        self.textColor = UIColor.red
+        
+        self.textColor = UIColor.white
         self.isSecureTextEntry = isSecure
         self.layer.cornerRadius = 15
         
         self.minimumFontSize = 20
         
         self.attributedPlaceholder = NSAttributedString(string: placeholderText,attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
-        
-        
-        bottomBar = UIView(frame: CGRect(x: self.frame.origin.x, y: self.frame.height-20, width: self.frame.width*0.8, height: 2))
-        bottomBar?.backgroundColor = UIColor.red
-//        self.addSubview(bottomBar!)
         
     }
     

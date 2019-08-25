@@ -240,7 +240,8 @@ public class WormTabStrip: UIView,UIScrollViewDelegate {
     private func formatButton(tab:WormTabStripButton,XOffset:CGFloat){
         tab.frame.size.height = eyStyle.kHeightOfTopScrollView
         tab.paddingToEachSide = eyStyle.kPaddingOfIndicator
-        //            tab.backgroundColor = UIColor.yellowColor()
+//                    tab.backgroundColor = UIColor.white
+//        tab.layer.cornerRadius = 20
         tab.tabText = delegate!.WTSTitleForTab(index: tab.index!) as NSString?
         tab.textColor = eyStyle.tabItemDefaultColor
         tab.frame.origin.x = XOffset

@@ -24,6 +24,8 @@ class WormTabStripButton: UILabel{
     //MARK: init
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.layer.addShadow()
+        
         
     }
     convenience required init(key:String) {

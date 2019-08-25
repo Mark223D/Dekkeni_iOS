@@ -11,11 +11,14 @@ import UIKit
 class StoreViewController: UIViewController {
     
     let screenSize: CGRect = UIScreen.main.bounds
-
+    
     var showingSearch: Bool = false
+    var showingAddress: Bool = false
+    var showingFilters: Bool = false
 
     @IBOutlet weak var addressBtn: UIButton!
     
+    @IBOutlet weak var addressTextField: DekkeniTextField!
     
     @IBOutlet weak var topViewHeightConstraint: NSLayoutConstraint!
     
@@ -23,8 +26,8 @@ class StoreViewController: UIViewController {
     
     var topViewOriginalHeight: CGFloat?
     private var lastContentOffset: CGFloat = 0
-
-
+    
+    
     let titles = [
         "Categories",
         "Featured",
@@ -51,11 +54,12 @@ class StoreViewController: UIViewController {
         view.eyStyle.spacingBetweenTabs = 15
         view.eyStyle.dividerBackgroundColor = .white
         view.eyStyle.tabItemSelectedColor = .white
+        
         view.currentTabIndex = 0
         view.shouldCenterSelectedWorm = true
         view.buildUI()
         
-
+        
         return view
     }()
     
@@ -70,7 +74,7 @@ class StoreViewController: UIViewController {
         StoreItemCellContent(id: 6, title: "Bread", category: "Fresh", description: "Bread Bag 500g", quantity: 0, price: "2.50"),
         StoreItemCellContent(id: 7, title: "Milk", category: "Fresh", description: "Milk Carton 1L", quantity: 0, price: "3.50"),
     ]
-
+    
     var selectedContent:StoreItemCellContent?
     
     
@@ -83,15 +87,15 @@ class StoreViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         
         styleStatusBar()
-
+        
         self.view.addSubview(viewPager)
-
+        
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.barTintColor = .red
-
+        
         NotificationCenter.default.addObserver(forName: Notification.Name("openDetails"), object: nil, queue: nil, using: detailsClick)
         
         self.title = "Store"
@@ -100,11 +104,34 @@ class StoreViewController: UIViewController {
         self.searchBar.showsCancelButton = true
         self.searchBar.setShowsCancelButton(true, animated: true)
         self.topViewOriginalHeight = self.topViewHeightConstraint.constant
-
+        
         self.searchButton.layer.addShadow()
         self.filtersButtons.layer.addShadow()
-        
+    
         self.hideKeyboardWhenTappedAround()
+        
+        guard let userIcon = UIImage(named: "pin") else { return  }
+        setPaddingWithImage(image: userIcon, textField: addressTextField)
+      
+        
+    }
+    
+    func setPaddingWithImage(image: UIImage, textField: UITextField){
+        let imageView = UIImageView(image: image)
+        imageView.contentMode = .scaleAspectFit
+        imageView.tintColor = .white
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 50))
+        
+        imageView.frame = CGRect(x: 0, y: 15, width: 20.0, height: 20.0)
+        //For Setting extra padding other than Icon.
+        let seperatorView = UIView(frame: CGRect(x: 50, y: 0, width: 10, height: 50))
+        seperatorView.backgroundColor = UIColor(red: 80/255, green: 89/255, blue: 94/255, alpha: 0)
+        view.addSubview(seperatorView)
+        textField.leftViewMode = .always
+        view.addSubview(imageView)
+        view.backgroundColor = .clear
+        textField.leftViewMode = UITextField.ViewMode.always
+        textField.leftView = view
     }
     
     @IBAction func menuBtnPressed(_ sender: Any) {
@@ -114,27 +141,21 @@ class StoreViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if self.viewPager.currentTabIndex != 0{
-            
-        
-        if segue.identifier == "toDetailsPage"{
-            let object = self.selectedContent
-            let controller = segue.destination as! DetailsViewController
-            controller.content = object
-        }
-        }
-        else{
-            //Category Selected
-//            self.viewPager.selectTabAt(index: <#T##Int#>)
+            if segue.identifier == "toDetailsPage"{
+                let object = self.selectedContent
+                let controller = segue.destination as! DetailsViewController
+                controller.content = object
+            }
         }
     }
     
     
     
     @IBAction func addressBtnPressed(_ sender: Any) {
-        
+        addressToggle(sender)
     }
     @IBAction func searchButtonPressed(_ sender: Any) {
-        searchToggle(self)
+        searchToggle(sender)
     }
     
     @objc func searchToggle(_ sender: Any){
@@ -144,6 +165,7 @@ class StoreViewController: UIViewController {
             self.searchStackView.distribution = .fill
             self.addressBtn.isHidden = true
             self.filtersButtons.isHidden = true
+            self.searchBar.becomeFirstResponder()
             showingSearch = true
             
         }else{
@@ -153,9 +175,34 @@ class StoreViewController: UIViewController {
             self.searchBar.resignFirstResponder()
             self.addressBtn.isHidden = false
             self.filtersButtons.isHidden = false
-
-
+            
+            
+            
             showingSearch = false
+        }
+    }
+    
+    
+    @objc func addressToggle(_ sender: Any){
+        if !showingAddress{
+            self.addressTextField.isHidden = false
+            self.searchButton.isHidden = true
+            self.searchStackView.alignment = .center
+            self.addressBtn.isHidden = true
+            self.filtersButtons.isHidden = true
+            showingAddress = true
+            
+        }else{
+            self.addressTextField.isHidden = true
+            self.searchStackView.distribution = .fillEqually
+            self.searchButton.isHidden = false
+            self.searchBar.resignFirstResponder()
+            self.addressBtn.isHidden = false
+            self.filtersButtons.isHidden = false
+            
+            
+            
+            showingAddress = false
         }
     }
     func detailsClick(notification:Notification) -> Void {
@@ -168,22 +215,14 @@ class StoreViewController: UIViewController {
     func styleStatusBar(){
         
         UINavigationBar.appearance().clipsToBounds = true
-        
         let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
-        
         statusBar.backgroundColor = UIColor.red
         
-    
     }
-    
-
-    
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-    
-    // MARK: WormTabStrip Delegate Functions
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -193,13 +232,14 @@ class StoreViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-
+        
         super.viewWillDisappear(animated)
     }
     
     
 }
 
+// MARK: WormTabStrip Delegate Functions
 extension StoreViewController: WormTabStripDelegate{
     func WTSNumberOfTabs() -> Int {
         return titles.count
@@ -210,20 +250,9 @@ extension StoreViewController: WormTabStripDelegate{
         let tabPageY = self.view.frame.origin.y
         let tabPageW = self.view.frame.width
         let tabPageH = self.view.frame.height-50
-
+        
         let view = UIView(frame: CGRect(x: tabPageX, y: tabPageY , width: tabPageW, height: tabPageH))
-//        if index == 0{
-//            let tableView = UITableView(frame: CGRect(x: self.view.frame.origin.x, y: self.view.frame.origin.y, width: self.view.frame.width, height: view.frame.height ))
-//            tableView.backgroundColor = UIColor(displayP3Red: 193/255, green: 66/255, blue: 40/255, alpha: 0.05)
-//            tableView.allowsSelection = true
-//            tableView.delegate = self
-//            tableView.dataSource = self
-//            tableView.separatorStyle = .none
-//            tableView.register(UINib(nibName: "CategoryTableViewCell", bundle: nil), forCellReuseIdentifier: "categoryCell")
-//            view.addSubview(tableView)
-//        }
-//        else{
-
+        
         let flowLayout = UICollectionViewFlowLayout.init()
         
         let collectionView = UICollectionView(frame: CGRect(x: self.view.frame.origin.x, y: self.view.frame.origin.y, width: self.view.frame.width, height: view.frame.height ), collectionViewLayout: flowLayout)
@@ -233,12 +262,10 @@ extension StoreViewController: WormTabStripDelegate{
         collectionView.delegate = self
         collectionView.allowsSelection = true
         collectionView.register(UINib(nibName: "StoreTableViewCell", bundle: nil), forCellWithReuseIdentifier: "StoreItem")
-
+        
         
         view.addSubview(collectionView)
         self.lists.append(collectionView)
-//        }
-    
         
         return view
     }
@@ -273,6 +300,7 @@ extension StoreViewController: UICollectionViewDataSource {
                 cell.titleLabel.text = titles[indexPath.row+1]
                 cell.productImageView.backgroundColor = .red
                 cell.imageButton.isUserInteractionEnabled = false
+                cell.imageBottomSpaceConstraint.constant = cell.imageBottomSpaceConstraint.constant * 2
             }
             else{
                 cell.isHidden = true
@@ -285,17 +313,22 @@ extension StoreViewController: UICollectionViewDataSource {
         }
         cell.layer.borderColor = UIColor(displayP3Red: 193/255, green: 66/255, blue: 40/255, alpha: 0.1).cgColor
         cell.layer.borderWidth = 1
+        cell.productImageView.layer.addShadow()
+        cell.priceLabel.layer.addShadow()
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("CollectionView: DidSelectItemAt")
-        self.viewPager.selectTabAt(index: indexPath.row+1)
-
+        if collectionView.tag == 0{
+                self.viewPager.selectTabAt(index: indexPath.row+1)
+        }
+        
+        
         
     }
     
     
-   
+    
     
 }
 extension StoreViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
@@ -304,7 +337,7 @@ extension StoreViewController: UICollectionViewDelegate, UICollectionViewDelegat
         if (self.lastContentOffset > scrollView.contentOffset.y) {
             // move up
             if scrollView.isAtTop{
-                    self.topViewHeightConstraint.constant = self.topViewOriginalHeight!
+                self.topViewHeightConstraint.constant = self.topViewOriginalHeight!
                 self.viewPager.frame = CGRect(x: self.viewPager.frame.origin.x, y: self.topViewOriginalHeight!, width: self.viewPager.frame.width, height: self.viewPager.frame.height)
                 
             }
@@ -314,9 +347,9 @@ extension StoreViewController: UICollectionViewDelegate, UICollectionViewDelegat
         else if (self.lastContentOffset < scrollView.contentOffset.y) {
             // move down
             if !scrollView.isDecelerating{
-            
-            self.topViewHeightConstraint.constant = 0
-            self.viewPager.frame = CGRect(x: self.viewPager.frame.origin.x, y: 0, width: self.viewPager.frame.width, height: self.viewPager.frame.height)
+                
+                self.topViewHeightConstraint.constant = 0
+                self.viewPager.frame = CGRect(x: self.viewPager.frame.origin.x, y: 0, width: self.viewPager.frame.width, height: self.viewPager.frame.height)
             }
         }
         
@@ -331,39 +364,18 @@ extension StoreViewController: UICollectionViewDelegate, UICollectionViewDelegat
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let leftAndRightPaddings: CGFloat = 30
-                let numberOfItemsPerRow: CGFloat = 2.0
-                let width = (screenSize.width-leftAndRightPaddings)/numberOfItemsPerRow
+        let numberOfItemsPerRow: CGFloat = 2.0
+        let width = (screenSize.width-leftAndRightPaddings)/numberOfItemsPerRow
         if collectionView.tag == 0{
             return CGSize(width: width, height: width)
-
+            
         }
-                return CGSize(width: width, height: width*1.4)
+        return CGSize(width: width, height: width*1.4)
     }
     
-   
+    
 }
 
-
-extension StoreViewController: UITableViewDataSource{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return titles.count - 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "categoryCell", for: indexPath) as! CategoryTableViewCell
-        cell.categoryTitle.text = titles[indexPath.row+1]
-        return cell
-    }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        self.viewPager.selectTabAt(index: indexPath.row+1)
-    }
-    
-    
-}
-extension StoreViewController:UITableViewDelegate{
-    
-}
 extension UIApplication {
     var icon: UIImage? {
         guard let iconsDictionary = Bundle.main.infoDictionary?["CFBundleIcons"] as? NSDictionary,

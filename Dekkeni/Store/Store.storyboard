@@ -35,6 +35,17 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ccZ-oT-mdX">
                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="64"/>
                                                 <subviews>
+                                                    <textField hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Address: Beirut Lebanon" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oru-eU-mN1" customClass="DekkeniTextField" customModule="Dekkeni" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="64"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="insetX">
+                                                                <real key="value" value="30"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
                                                     <searchBar hidden="YES" contentMode="redraw" placeholder="Search" showsCancelButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4h-s8-JdF">
                                                         <rect key="frame" x="0.0" y="0.0" width="0.0" height="64"/>
                                                         <color key="backgroundColor" red="0.75686274509999996" green="0.25882352939999997" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -49,6 +60,7 @@
                                                     </searchBar>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQt-oX-gz7">
                                                         <rect key="frame" x="0.0" y="0.0" width="124.5" height="64"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="pin"/>
                                                         <connections>
                                                             <action selector="addressBtnPressed:" destination="RVX-sL-K5e" eventType="touchUpInside" id="QGw-ll-g53"/>
@@ -120,6 +132,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addressBtn" destination="cQt-oX-gz7" id="eC3-f4-TqL"/>
+                        <outlet property="addressTextField" destination="Oru-eU-mN1" id="eNO-eu-IYa"/>
                         <outlet property="filtersButtons" destination="zDY-AE-GbD" id="Sfg-xm-6JR"/>
                         <outlet property="menuButton" destination="PiW-WI-Ntb" id="Gki-w2-DR5"/>
                         <outlet property="searchBar" destination="D4h-s8-JdF" id="CUm-Vu-D1a"/>

@@ -35,6 +35,7 @@ class StoreItemCellContent {
 @IBDesignable
 class StoreItemCell: UICollectionViewCell {
     
+    @IBOutlet weak var imageBottomSpaceConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!

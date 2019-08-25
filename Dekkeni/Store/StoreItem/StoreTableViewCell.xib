@@ -134,6 +134,7 @@
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <connections>
+                <outlet property="imageBottomSpaceConstraint" destination="QKk-mY-6pX" id="sDf-xR-CM6"/>
                 <outlet property="imageButton" destination="4xf-pc-KxV" id="pJc-GP-qYZ"/>
                 <outlet property="minusBtn" destination="AGn-Mb-uzx" id="NXh-lD-Y1a"/>
                 <outlet property="plusBtn" destination="UuC-va-Tx7" id="VEb-Cn-qj6"/>

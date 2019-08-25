@@ -17,6 +17,7 @@ class ResetPassViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
+        self.moveUpWhenShowingKeyboard()
         self.backView.layer.addShadow()
     }
 

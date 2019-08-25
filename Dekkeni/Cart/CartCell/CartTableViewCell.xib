@@ -20,19 +20,19 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YW5-tO-0hp">
-                        <rect key="frame" x="16" y="6" width="288" height="110.5"/>
+                        <rect key="frame" x="8" y="6" width="304" height="110.5"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="pX2-ic-Nhf">
-                                <rect key="frame" x="18" y="20" width="252" height="70.5"/>
+                                <rect key="frame" x="19" y="20" width="266" height="70.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEt-dS-Jh3">
-                                        <rect key="frame" x="0.0" y="0.0" width="126" height="70.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="133" height="70.5"/>
                                         <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFv-gW-F3F">
-                                        <rect key="frame" x="126" y="0.0" width="126" height="70.5"/>
+                                        <rect key="frame" x="133" y="0.0" width="133" height="70.5"/>
                                         <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -56,7 +56,7 @@
                 </subviews>
                 <color key="backgroundColor" red="0.82087332010000003" green="0.2066189349" blue="0.1176441684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstItem="YW5-tO-0hp" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.9" id="HEa-Ui-RGA"/>
+                    <constraint firstItem="YW5-tO-0hp" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.95" id="HEa-Ui-RGA"/>
                     <constraint firstItem="YW5-tO-0hp" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="bvj-gn-Peq"/>
                     <constraint firstItem="YW5-tO-0hp" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="tXV-ve-lFL"/>
                     <constraint firstItem="YW5-tO-0hp" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.9" id="u3c-Yz-RVO"/>

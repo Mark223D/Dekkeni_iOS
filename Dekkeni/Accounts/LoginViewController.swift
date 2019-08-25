@@ -18,11 +18,10 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.emailTextField.tag = 0
-        self.passwordTextField.tag = 1
         self.emailTextField.delegate = self
         self.passwordTextField.delegate = self
         self.hideKeyboardWhenTappedAround()
+        self.moveUpWhenShowingKeyboard()
         self.backView.layer.addShadow()
         self.dekkeniLabel.layer.addShadow()
 //        self.view.backgroundColor = UIColor.flat
@@ -44,7 +43,7 @@ class LoginViewController: UIViewController {
     
 }
 extension LoginViewController: UITextFieldDelegate {
-    private func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 
         //Email
         if textField == emailTextField {
